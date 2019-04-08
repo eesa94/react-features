@@ -1,0 +1,63 @@
+/* General */
+label {
+    font-size: 1.8rem;
+}
+
+
+/* TodoList.js */
+.todosWrapper {
+    margin-bottom: 60px;
+}
+
+.todoHeader {
+    font-size: 2rem;
+}
+
+.btnCreate {
+    font-size: 1.5rem;
+    width: 100px;
+}
+
+
+/* Todo.js */
+.todoRow {
+    min-height: 150px;
+    padding: 10px 0;
+    background-color: aliceblue;
+    border-radius: 5px;
+}    
+
+.todoBody {
+    margin-bottom: 10px;
+}
+
+.todoText {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.actionsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+.btnEdit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.actionsContainer .btn {
+    min-width: 70px;
+    height: 35px;
+    font-size: 1.3rem;
+}

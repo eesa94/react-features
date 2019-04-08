@@ -1,0 +1,28 @@
+.heroContainer {
+    height: 800px;
+    width: 100%;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.overlayOne {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.heroText {
+    position: absolute;
+    top: 20%;
+    left: 18%;
+}
+
+.heroHeader {
+    font-size: 9rem;
+    letter-spacing: 1px;
+}
+
+.heroSubHeader {
+    font-size: 4rem;
+    letter-spacing: 1.2px;
+}

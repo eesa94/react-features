@@ -1,0 +1,78 @@
+.btn.focus, .btn:focus {
+    box-shadow: none;
+}
+
+.burger {
+    position: fixed;
+    right: 2%;
+    top: 3%;
+    border: 3px solid black;
+    color: #000;
+    font-size: 1.6rem;
+    transition: 0.5s;
+}
+
+.navToggle:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+nav {
+    height: 100vh;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 50px 0;
+    /* background-color: rgba(0,0,0,0.85); */
+    background-color: #010f18;
+    border-right: 2px solid #fff;
+    transition: 0.8s;
+    z-index: 100;
+}
+
+.navLinkWrapper {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 50%;
+}
+
+.navLink {
+    display: block;
+    background-color: #fff;
+    margin-bottom: 20px;
+    height: 120px;
+    width: 300px;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+.navLinkActive {
+    opacity: 1;
+}
+
+.linkInnerOne {
+    background-color: #285482;
+    border-right: 2px solid #fff;
+}
+
+.linkInnerOneActive {
+    border-right: 2px solid black;
+}
+
+.linkInnerTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(40, 84, 130, 0.85);
+    transition: 0.3s;
+}
+
+.linkInnerTwoActive {
+    background-color: rgba(40, 84, 130, 1);
+}
+
+.linkText {
+    font-size: 1.5rem;
+    color: #fff;
+}
