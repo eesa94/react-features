@@ -61,7 +61,7 @@ class Nav extends Component {
                 width={30}
                 lineHeight={3}
                 lineSpacing={4}
-                color='#956397'
+                color='#000'
                 className="burger" 
                 active={this.state.active} 
                 onClick={() => { this.toggleBurger(); this.navOpen(); }}

@@ -1,10 +1,10 @@
 import React from 'react';
 import './Hero.css';
-import benjaminvoros_edit_2 from '../../Images/benjaminvoros_edit_2.jpg';
+import landscape_gradient from '../../Images/landscape_gradient.jpg';
 
 const Hero = () => {    
     const bgImage = {
-        backgroundImage: `url(${benjaminvoros_edit_2})`,
+        backgroundImage: `url(${landscape_gradient})`,
     }
 
     return (
@@ -12,10 +12,10 @@ const Hero = () => {
             <div className="overlayOne w-100 h-100">
                 <div className="heroText">
                     <h1 className="heroHeader changa8 white">
-                        Header.
+                        React Features.
                     </h1>
                     <h3 className="heroSubheader changa6 white">
-                        Some text here, and some more text here.
+                        Use this app to test different React features and techniques e.g. navbars, parallax
                     </h3>
                 </div>
             </div>
