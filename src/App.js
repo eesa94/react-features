@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Components/Home/Home';
-import Nav from './Components/Nav/Nav';
 import PathOne from './Components/Paths/PathOne';
 import PathTwo from './Components/Paths/PathTwo';
+import FeatureOne from './Components/Features/FeatureOne/FeatureOne';
 
 
 
@@ -13,11 +13,11 @@ class App extends Component {
       return (
         <BrowserRouter>
           <div className="App">
-            <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/pathone" component={PathOne} />
               <Route path="/pathtwo" component={PathTwo} />
+              <Route path="/feature-one" component={FeatureOne} />
             </Switch>
           </div>
         </BrowserRouter>

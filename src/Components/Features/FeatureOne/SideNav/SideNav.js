@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './Nav.css';
-import NavLink from './NavLink';
+import './SideNav.css';
+import SideNavLink from './SideNavLink';
 import { Squeeze } from 'react-burgers';
 import onClickOutside from 'react-onclickoutside';
 
-class Nav extends Component {
+class SideNav extends Component {
     constructor(props) {
         super(props)
 
@@ -61,7 +61,7 @@ class Nav extends Component {
                 width={30}
                 lineHeight={3}
                 lineSpacing={4}
-                color='#000'
+                color='#fff'
                 className="burger" 
                 active={this.state.active} 
                 onClick={() => { this.toggleBurger(); this.navOpen(); }}
@@ -70,7 +70,7 @@ class Nav extends Component {
                     <ul className="navLinkWrapper">
                         {
                             this.state.links.map((link, index) =>
-                                <NavLink key={index} index={index} link={link} onClick={this.toggleBurger} />
+                                <SideNavLink key={index} index={index} link={link} onClick={this.toggleBurger} />
                             )
                         }
                     </ul>
@@ -80,4 +80,4 @@ class Nav extends Component {
     }
 }
 
-export default onClickOutside(Nav);
+export default onClickOutside(SideNav);

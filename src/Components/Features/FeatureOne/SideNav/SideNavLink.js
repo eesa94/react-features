@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Nav.css';
+import './SideNav.css';
 
-class NavLink extends Component {
+class SideNavLink extends Component {
     constructor(props) {
         super(props)
       
@@ -67,5 +67,5 @@ class NavLink extends Component {
     }
 }
 
-export default NavLink
+export default SideNavLink
 
