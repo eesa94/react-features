@@ -17,7 +17,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/pathone" component={PathOne} />
               <Route path="/pathtwo" component={PathTwo} />
-              <Route path="/feature-one" component={FeatureOne} />
+              <Route path="/feature-1" component={FeatureOne} />
             </Switch>
           </div>
         </BrowserRouter>
