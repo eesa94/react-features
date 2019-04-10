@@ -10,11 +10,11 @@ class Home extends Component {
 
         this.state = {
             features: [
-                'Side Nav',
-                'Scroll Nav',
-                'Link Hover Effects',
-                'Parallax Hero',
-                'Parallax Elements'
+                {name: 'Side Nav', status: true},
+                {name: 'Scroll Nav', status: true},
+                {name: 'Link Hover Effects', status: false},
+                {name: 'Parallax Hero', status: false},
+                {name: 'Parallax Elements', status: false}
             ],
             active: -1
         }
@@ -48,19 +48,18 @@ class Home extends Component {
 
             <Container className="container homeContainer">
                 <Row>
-
                     {
                         this.state.features.map((feature, index) => 
                             <Col lg="4" className="featureCol">
                                 <Link 
                                     to={'/feature-' + (index+1)}
-                                    className={active === index ? linkClass + " featureLinkActive" : linkClass}
+                                    className={active === index ? (feature.status ? linkClass + " featureLinkCurrent featureLinkCurrentActive" : linkClass + " featureLinkFuture featureLinkFutureActive") : (feature.status ? linkClass + " featureLinkCurrent" : linkClass + " featureLinkFuture")}
                                     key={index}
                                     onMouseEnter={this.mouseEnter.bind(this, index)}
                                     onMouseLeave={this.mouseLeave.bind(this)}
                                     >
                                     <h1 className={active === index ? headerClass + " black" : headerClass + " white" }>
-                                        {feature}
+                                        {feature.name}
                                     </h1>
                                 </Link>
                             </Col>
