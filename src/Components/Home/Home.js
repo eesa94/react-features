@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Home.css';
 import Hero from '../Hero/Hero';
 import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'reactstrap';
 
 class Home extends Component {
     constructor(props) {
@@ -23,21 +24,22 @@ class Home extends Component {
         <div>
             <Hero />
 
-            <div className="container-fluid homeContainer">
-                <ul>
+            <Container className="container homeContainer">
+                <Row>
+
                     {
                         this.state.features.map((feature, index) => 
-                            <li className="featureList">
-                                <Link to={'/feature-' + (index+1)}>
-                                    <h1 className="sectionHeader changa6 white">
+                            <Col lg="4" className="featureCol">
+                                <Link to={'/feature-' + (index+1)} className="featureLink w-100">
+                                    <h1 className="featureHeader changa6 white">
                                         {feature}
                                     </h1>
                                 </Link>
-                            </li>
+                            </Col>
                         )
                     }
-                </ul>
-            </div>
+                </Row>
+            </Container>
         </div>
         )
     }
