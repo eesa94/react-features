@@ -12,6 +12,7 @@ class Home extends Component {
             features: [
                 'Side Nav',
                 'Scroll Nav',
+                'Link Hover Effects',
                 'Parallax Hero',
                 'Parallax Elements'
             ],
@@ -25,7 +26,6 @@ class Home extends Component {
         }, () => {
             document.addEventListener('mouseleave', this.mouseLeave);
         })
-        console.log('active' + index);
     }
     
     mouseLeave = () => {
@@ -34,7 +34,6 @@ class Home extends Component {
         }, () => {
             document.removeEventListener('mouseleave', this.mouseLeave);
         })
-        console.log('inactive');
     }
 
     render() {
