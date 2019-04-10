@@ -20,10 +20,10 @@ class Home extends Component {
 
     render() {
         return (
-        <div className="homeContainer">
+        <div>
             <Hero />
 
-            <div className="container-fluid">
+            <div className="container-fluid homeContainer">
                 <ul>
                     {
                         this.state.features.map((feature, index) => 
