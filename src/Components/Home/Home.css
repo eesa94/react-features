@@ -6,20 +6,24 @@
 .featureCol {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    height: 50px;
+    margin-bottom: 45px;
     text-align: center;
 }
 
 .featureLink {
+    height: 100px;
     border: 3px solid cyan;
     padding: 10px 15px;
+    transition: 0.5s;
 }
 
-.featureLink:hover {
-    text-decoration: none;
+.featureLinkActive {
+    text-decoration: none!important;
+    background-color: cyan;
 }
 
 .featureHeader {
     margin-bottom: 0;
+    letter-spacing: 1.15px;
+    transition: 0.5s;
 }
