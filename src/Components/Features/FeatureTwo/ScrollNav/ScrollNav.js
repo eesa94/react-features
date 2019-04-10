@@ -23,7 +23,7 @@ export class Nav extends Component {
     }
 
     handleScroll = () => {
-        const scrolled = window.scrollY > 200;
+        const scrolled = window.scrollY > 50;
         if (scrolled !== this.state.scrolled) {
             this.setState({
                 scrolled: scrolled

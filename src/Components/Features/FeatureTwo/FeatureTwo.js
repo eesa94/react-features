@@ -8,7 +8,7 @@ const FeatureTwo = () => {
   return (
       <div>
         <ScrollNav />
-        <div className="container-fluid featureContainer featureTwoContainer">
+        <div className="container-fluid featureContainer">
             <div className="row no-gutters">
                 <div className="col-lg-4 offset-lg-4 text-center">
                 <h1 className="sectionHeader featureHeader changa6 white">
