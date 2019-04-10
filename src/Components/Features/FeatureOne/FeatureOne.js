@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const FeatureOne = () => {
   return (
-    <div className="container-fluid featureContainer">
+    <div className="container-fluid featureOneContainer">
       <Link to='/' className="changa-2 white">
         Home
       </Link>

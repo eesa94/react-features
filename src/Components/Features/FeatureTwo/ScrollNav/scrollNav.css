@@ -1,0 +1,60 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 20px 35px;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+.navigationTop {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 30px 25px;
+}
+
+.navigationScrolled {    
+    background-color: rgb(255, 255, 255);
+    padding: 20px 35px;
+    border-bottom: 3px solid black;
+}
+
+.navigationInner {
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.brandImage {
+    height: 45px;
+    transition: 0.5s;
+}
+
+.linkList {
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+.linkListItem {
+    margin-right: 10px;
+    min-width: 160px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.scrollNavLink {
+    width: 100%;
+    padding: 10px 15px;
+    color: #000;
+    background-color: #5fe2dd;
+    border: 2px solid #5fe2dd;
+    transition: 0.5s ease all;
+}
+
+.scrollNavLink:hover {
+    text-decoration: none;
+    color: #5fe2dd;
+    background-color: #fff;
+    border: 2px solid #5fe2dd;
+}

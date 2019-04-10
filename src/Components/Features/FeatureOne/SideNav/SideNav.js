@@ -66,7 +66,7 @@ class SideNav extends Component {
                 active={this.state.active} 
                 onClick={() => { this.toggleBurger(); this.navOpen(); }}
                 />
-                <nav style={this.state}>
+                <nav className="sidenav" style={this.state}>
                     <ul className="navLinkWrapper">
                         {
                             this.state.links.map((link, index) =>

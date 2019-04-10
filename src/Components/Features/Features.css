@@ -1,4 +1,9 @@
-.featureContainer {
+.featureOneContainer {
     height: 400px;
     padding: 25px 25px
+}
+
+.featureTwoContainer {
+    height: 1200px;
+    padding-top: 200px
 }

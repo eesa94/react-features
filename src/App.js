@@ -5,6 +5,7 @@ import Home from './Components/Home/Home';
 import PathOne from './Components/Paths/PathOne';
 import PathTwo from './Components/Paths/PathTwo';
 import FeatureOne from './Components/Features/FeatureOne/FeatureOne';
+import FeatureTwo from './Components/Features/FeatureTwo/FeatureTwo';
 
 
 
@@ -18,6 +19,7 @@ class App extends Component {
               <Route path="/pathone" component={PathOne} />
               <Route path="/pathtwo" component={PathTwo} />
               <Route path="/feature-1" component={FeatureOne} />
+              <Route path="/feature-2" component={FeatureTwo} />
             </Switch>
           </div>
         </BrowserRouter>

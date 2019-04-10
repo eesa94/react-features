@@ -34,7 +34,6 @@ class Home extends Component {
                                     </h1>
                                 </Link>
                             </li>
-    
                         )
                     }
                 </ul>
