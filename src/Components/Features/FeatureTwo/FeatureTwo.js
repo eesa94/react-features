@@ -6,10 +6,12 @@ import ScrollNav from './ScrollNav/ScrollNav';
 
 const FeatureTwo = () => {
   return (
-    <div className="container-fluid featureContainer">
+      <div>
         <ScrollNav />
-        <FeaturesMaster featureName={'Scroll Nav'} />
-    </div>
+        <div className="container-fluid featureContainer">
+            <FeaturesMaster featureName={'Scroll Nav'} />
+        </div>
+      </div>
   )
 }
 

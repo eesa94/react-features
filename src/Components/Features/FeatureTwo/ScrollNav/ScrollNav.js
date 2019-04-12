@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Stirrd_Brandmark_White_RGB_crop from './Stirrd_Brandmark_White_RGB_crop.png';
 import Stirrd_Brandmark_Black_RGB_crop from './Stirrd_Brandmark_Black_RGB_crop.png';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 import './ScrollNav.css';
 
 const brandNameWhite = Stirrd_Brandmark_White_RGB_crop;
