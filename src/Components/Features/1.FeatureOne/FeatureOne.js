@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Features.css';
 import FeaturesMaster from '../FeaturesMaster';
-import SideNav from './SideNav/SideNav';
+import SideNav from './SideNav';
 
 
 const FeatureOne = () => {

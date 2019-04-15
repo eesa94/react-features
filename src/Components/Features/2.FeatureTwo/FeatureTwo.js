@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Features.css';
 import FeaturesMaster from '../FeaturesMaster';
-import ScrollNav from './ScrollNav/ScrollNav';
+import ScrollNav from './ScrollNav';
 
 
 const FeatureTwo = () => {

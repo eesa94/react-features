@@ -5,8 +5,9 @@ import ScrollToTop from './Components/ScrollToTop';
 import Home from './Components/Home/Home';
 import PathOne from './Components/Paths/PathOne';
 import PathTwo from './Components/Paths/PathTwo';
-import FeatureOne from './Components/Features/FeatureOne/FeatureOne';
-import FeatureTwo from './Components/Features/FeatureTwo/FeatureTwo';
+import FeatureOne from './Components/Features/1.FeatureOne/FeatureOne';
+import FeatureTwo from './Components/Features/2.FeatureTwo/FeatureTwo';
+import FeatureThree from './Components/Features/3.FeatureThree/FeatureThree';
 
 
 
@@ -22,6 +23,7 @@ class App extends Component {
                 <Route path="/pathtwo" component={PathTwo} />
                 <Route path="/feature-1" component={FeatureOne} />
                 <Route path="/feature-2" component={FeatureTwo} />
+                <Route path="/feature-3" component={FeatureThree} />
               </Switch>
             </div>
           </ScrollToTop>
