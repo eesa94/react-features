@@ -12,7 +12,7 @@ class Home extends Component {
             features: [
                 {name: 'Side Nav', status: true},
                 {name: 'Scroll Nav', status: true},
-                {name: 'Nav Hover FX', status: false},
+                {name: 'Nav Hover FX', status: true},
                 {name: 'Parallax Hero', status: false},
                 {name: 'Parallax Elements', status: false}
             ],
