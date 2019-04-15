@@ -9,11 +9,12 @@
 
 .overlayOne {
     background-color: rgba(0, 0, 0, 0.15);
+    height: 800px;
 }
 
 .heroText {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 18%;
 }
 

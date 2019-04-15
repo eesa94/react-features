@@ -14,7 +14,8 @@ class Home extends Component {
                 {name: 'Scroll Nav', status: true},
                 {name: 'Nav Hover FX', status: true},
                 {name: 'Parallax Hero', status: false},
-                {name: 'Parallax Elements', status: false}
+                {name: 'Parallax Elements', status: false},
+                {name: 'Animation & Motion', status: false},
             ],
             active: -1
         }
@@ -40,7 +41,7 @@ class Home extends Component {
 
         const active = this.state.active;
         const linkClass = "featureLink d-flex justify-content-center align-items-center w-100";
-        const headerClass = "featureHeader changa6";
+        const headerClass = "featureLinkHeader changa6";
 
         return (
         <div>
