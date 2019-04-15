@@ -8,6 +8,7 @@ import PathTwo from './Components/Paths/PathTwo';
 import FeatureOne from './Components/Features/1.FeatureOne/FeatureOne';
 import FeatureTwo from './Components/Features/2.FeatureTwo/FeatureTwo';
 import FeatureThree from './Components/Features/3.FeatureThree/FeatureThree';
+import FeatureFour from './Components/Features/4.FeatureFour/FeatureFour';
 
 
 
@@ -24,6 +25,7 @@ class App extends Component {
                 <Route path="/feature-1" component={FeatureOne} />
                 <Route path="/feature-2" component={FeatureTwo} />
                 <Route path="/feature-3" component={FeatureThree} />
+                <Route path="/feature-4" component={FeatureFour} />
               </Switch>
             </div>
           </ScrollToTop>

@@ -9,7 +9,7 @@
 
 .overlayOne {
     background-color: rgba(0, 0, 0, 0.15);
-    height: 800px;
+    /* height: 100vh; */
 }
 
 .heroText {

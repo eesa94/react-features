@@ -3,6 +3,8 @@ import './Home.css';
 import Hero from '../Hero/Hero';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
+import landscape_gradient from '../../Images/landscape_gradient.jpg';
+
 
 class Home extends Component {
     constructor(props) {
@@ -13,7 +15,7 @@ class Home extends Component {
                 {name: 'Side Nav', status: true},
                 {name: 'Scroll Nav', status: true},
                 {name: 'Nav Hover FX', status: true},
-                {name: 'Parallax Hero', status: false},
+                {name: 'Parallax Hero', status: true},
                 {name: 'Parallax Elements', status: false},
                 {name: 'Animation & Motion', status: false},
             ],
@@ -43,9 +45,18 @@ class Home extends Component {
         const linkClass = "featureLink d-flex justify-content-center align-items-center w-100";
         const headerClass = "featureLinkHeader changa6";
 
+        const heroHeader = "React Features.";
+        const heroSubHeader = "Use this app to test different React features and techniques e.g. navbars, parallax";
+
+
         return (
         <div>
-            <Hero />
+            <Hero 
+                image={landscape_gradient} 
+                strength={700} 
+                overlayHeight={{height: "80vh"}}
+                heroHeader={heroHeader} 
+                heroSubHeader={heroSubHeader} />
 
             <Container className="container homeContainer">
                 <Row>
