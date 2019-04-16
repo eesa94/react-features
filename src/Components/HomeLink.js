@@ -6,7 +6,7 @@ import './HomeLink.css';
 const HomeLink = () => {
     return (
         <Link to='/'>
-            <Button className="topBarLink homeLink changa2">home</Button>
+            <Button className="topBarLink homeLink changa2">Home</Button>
         </Link>
     )
 }

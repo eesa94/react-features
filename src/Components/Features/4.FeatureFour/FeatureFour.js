@@ -29,18 +29,19 @@ class FeatureFour extends Component {
     return (
       <div className="container-fluid" style={{ padding: 0 }} >
         <div className="topBar position-fixed">
+          <h1 className="featureName changa8 white mb1">React Parallax</h1>
           <HomeLink />
           <Button
             className="topBarLink launchModal changa2"
             onClick={this.toggleModal}
-            >how to use
+            >How to use
           </Button>
           <Button
             href='https://www.npmjs.com/package/react-parallax'
             target="_blank"
             rel="noopener noreferrer"
             className="topBarLink changa2">
-            react-parallax
+            Source
           </Button>
         </div>
 
