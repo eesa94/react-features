@@ -1,21 +1,25 @@
 import React from 'react';
 import '../Features.css';
-import { Link } from 'react-router-dom';
 import Hero from '../../Hero/Hero';
 import benjaminvoros_edit from '../../../Images/benjaminvoros_edit.jpg';
 import ethandow from '../../../Images/ethandow.jpg';
 import jessicalewis from '../../../Images/jessicalewis.jpg';
+import HomeLink from '../../HomeLink';
 
 
 const FeatureFour = () => {
   return (
     <div className="container-fluid" style={{ padding: 0 }} >
-      <Link 
-        to='/' 
-        className="changa-2 white position-fixed"
-        style={{ top: '3%', left: '2%', zIndex: '200'}}>
-        Home
-      </Link>
+      <div className="topBar position-fixed">
+        <HomeLink />
+        <a
+          href='https://www.npmjs.com/package/react-parallax'
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sourceLink">
+          react-parallax
+        </a>
+      </div>
 
       <Hero 
         image={benjaminvoros_edit} 

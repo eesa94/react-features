@@ -6,3 +6,13 @@
 .featureHeader {
     font-size: 3.5rem;
 }
+
+.topBar {
+    top: 3%;
+    left: 2%;
+    z-index: 200;
+}
+
+.topBar a {
+    margin-right: 10px;
+}

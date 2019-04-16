@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Features.css';
-import { Link } from 'react-router-dom';
+import HomeLink from '../HomeLink';
 
 
 class FeaturesMaster extends Component {
@@ -11,9 +11,7 @@ class FeaturesMaster extends Component {
                 <h1 className="sectionHeader featureHeader changa6 white">
                     {this.props.featureName}
                 </h1>
-                    <Link to='/' className="changa-2 white">
-                        Home
-                    </Link>
+                    <HomeLink />
                 </div>
             </div>
         )

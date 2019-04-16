@@ -7,6 +7,8 @@ class Hero extends Component {
     render() {
 
         const image = this.props.image;
+        const strength = this.props.strength;
+        const overlayHeight = this.props.overlayHeight;
         const heroHeader = this.props.heroHeader;
         const heroSubHeader = this.props.heroSubHeader;
         
@@ -14,12 +16,11 @@ class Hero extends Component {
             <Parallax
             bgImage={image}
             bgImageStyle={{height: '1300px', width: '100%'}}
-            strength={this.props.strength}>
-            <div className="overlayOne w-100" style={this.props.overlayHeight} >
-                <HeroText heroHeader={heroHeader} heroSubHeader={heroSubHeader} />
-            </div>
-
-        </Parallax>
+            strength={strength}>
+                <div className="overlayOne w-100" style={overlayHeight} >
+                    <HeroText heroHeader={heroHeader} heroSubHeader={heroSubHeader} />
+                </div>
+            </Parallax>
 
         )
     }
