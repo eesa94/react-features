@@ -13,6 +13,25 @@
     z-index: 200;
 }
 
-.topBar a {
+.topBarLink {
+    font-size: 1.8rem;
     margin-right: 10px;
+}
+
+.howToUse {
+    position: fixed;
+    top: 8%;
+    left: 5%;
+    width: 30vw;
+    background-color: white;
+    z-index: 300;
+    transition: 0.5s;
+}
+
+.showModal {
+    height: 200px;
+}
+
+.hideModal {
+    height: 0;
 }

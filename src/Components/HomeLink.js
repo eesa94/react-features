@@ -5,7 +5,7 @@ const HomeLink = () => {
     return (
         <Link 
             to='/' 
-            className="changa2 white homeLink">
+            className="changa2 white topBarLink">
             Home
         </Link>
     )
