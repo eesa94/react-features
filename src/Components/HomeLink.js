@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'reactstrap';
+import './HomeLink.css';
 
 const HomeLink = () => {
     return (
-        <Link 
-            to='/' 
-            className="changa2 white topBarLink">
-            Home
+        <Link to='/'>
+            <Button className="topBarLink homeLink changa2">home</Button>
         </Link>
     )
 }
