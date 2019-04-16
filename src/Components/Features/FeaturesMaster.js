@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Features.css';
-import HomeLink from '../HomeLink';
 
 
 class FeaturesMaster extends Component {
@@ -11,7 +10,6 @@ class FeaturesMaster extends Component {
                 <h1 className="sectionHeader featureHeader changa6 white">
                     {this.props.featureName}
                 </h1>
-                    <HomeLink />
                 </div>
             </div>
         )
