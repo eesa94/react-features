@@ -1,6 +1,5 @@
 import React from 'react';
 import '../Features.css';
-import FeaturesMaster from '../FeaturesMaster';
 import Navbar from './Navbar';
 import FeatureMenu from '../FeatureMenu';
 
