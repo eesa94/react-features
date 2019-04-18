@@ -6,7 +6,6 @@ import Modal from './Modal';
 
 
 class FeatureMenu extends Component {
-  
   render() {
     return (
       <div>
@@ -17,7 +16,9 @@ class FeatureMenu extends Component {
                   <Button className="topBarLink homeLink changa2">Home</Button>
               </Link>
 
-              <Modal />
+              <Modal 
+                steps={this.props.steps}
+                />
 
               <Button
                   href={this.props.source}
