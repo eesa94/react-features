@@ -49,8 +49,8 @@ class Modal extends Component {
             <ul style={{ listStyleType: 'none', paddingInlineStart: '10px', marginBottom: '5px' }} >
 
               {
-                steps.map(step => 
-                  <li className="mb1">
+                steps.map((step, index) => 
+                  <li className="mb1" key={index}>
                     <p className="modalText changa2">{step}</p>
                   </li>
                 )

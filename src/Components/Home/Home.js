@@ -19,29 +19,50 @@ class Home extends Component {
                 {name: 'Parallax Elements', status: false},
                 {name: 'Animation & Motion', status: false},
             ],
-            active: -1
+            templates: [
+                {name: 'Template 1', status: false}
+            ],
+            activeFeature: -1,
+            activeTemplate: -1
         }
     }
 
-    mouseEnter = (index) => {
+    enterFeature = (index) => {
         this.setState({
-            active: index
+            activeFeature: index
         }, () => {
-            document.addEventListener('mouseleave', this.mouseLeave);
+            document.addEventListener('mouseleave', this.leaveFeature);
         })
     }
     
-    mouseLeave = () => {
+    leaveFeature = () => {
         this.setState({
-            active: -1
+            activeFeature: -1
         }, () => {
-            document.removeEventListener('mouseleave', this.mouseLeave);
+            document.removeEventListener('mouseleave', this.leaveFeature);
+        })
+    }
+
+    enterTemplate = (index) => {
+        this.setState({
+            activeTemplate: index
+        }, () => {
+            document.addEventListener('mouseleave', this.leaveTemplate);
+        })
+    }
+    
+    leaveTemplate = () => {
+        this.setState({
+            activeTemplate: -1
+        }, () => {
+            document.removeEventListener('mouseleave', this.leaveTemplate);
         })
     }
 
     render() {
 
-        const active = this.state.active;
+        const activeFeature = this.state.activeFeature;
+        const activeTemplate = this.state.activeTemplate;
         const linkClass = "featureLink d-flex justify-content-center align-items-center w-100";
         const headerClass = "featureLinkHeader changa6";
 
@@ -59,19 +80,42 @@ class Home extends Component {
                 heroSubHeader={heroSubHeader} />
 
             <Container className="container homeContainer">
+                <h1 className="changa8 white mb2" style={{fontSize: '3.5rem'}} >Features</h1>
                 <Row>
                     {
                         this.state.features.map((feature, index) => 
                             <Col lg="4" className="featureCol">
                                 <Link 
                                     to={'/feature-' + (index+1)}
-                                    className={active === index ? (feature.status ? linkClass + " featureLinkCurrent featureLinkCurrentActive" : linkClass + " featureLinkFuture featureLinkFutureActive") : (feature.status ? linkClass + " featureLinkCurrent" : linkClass + " featureLinkFuture")}
+                                    className={activeFeature === index ? (feature.status ? linkClass + " featureLinkCurrent featureLinkCurrentActive" : linkClass + " featureLinkFuture featureLinkFutureActive") : (feature.status ? linkClass + " featureLinkCurrent" : linkClass + " featureLinkFuture")}
                                     key={index}
-                                    onMouseEnter={this.mouseEnter.bind(this, index)}
-                                    onMouseLeave={this.mouseLeave.bind(this)}
+                                    onMouseEnter={this.enterFeature.bind(this, index)}
+                                    onMouseLeave={this.leaveFeature.bind(this)}
                                     >
-                                    <h1 className={active === index ? headerClass + " black" : headerClass + " white" }>
+                                    <h1 className={activeFeature === index ? headerClass + " black" : headerClass + " white" }>
                                         {feature.name}
+                                    </h1>
+                                </Link>
+                            </Col>
+                        )
+                    }
+                </Row>
+            </Container>
+            <Container className="container homeContainer">
+                <h1 className="changa8 white mb2" style={{fontSize: '3.5rem'}} >Templates</h1>
+                <Row>
+                    {
+                        this.state.templates.map((template, index) => 
+                            <Col lg="4" className="featureCol">
+                                <Link 
+                                    to={'/template-' + (index+1)}
+                                    className={activeTemplate === index ? (template.status ? linkClass + " featureLinkCurrent featureLinkCurrentActive" : linkClass + " featureLinkFuture featureLinkFutureActive") : (template.status ? linkClass + " featureLinkCurrent" : linkClass + " featureLinkFuture")}
+                                    key={index}
+                                    onMouseEnter={this.enterTemplate.bind(this, index)}
+                                    onMouseLeave={this.leaveTemplate.bind(this)}
+                                    >
+                                    <h1 className={activeTemplate === index ? headerClass + " black" : headerClass + " white" }>
+                                        {template.name}
                                     </h1>
                                 </Link>
                             </Col>

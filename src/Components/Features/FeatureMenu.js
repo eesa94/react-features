@@ -17,6 +17,7 @@ class FeatureMenu extends Component {
               </Link>
 
               <Modal 
+                name={this.props.name}
                 steps={this.props.steps}
                 />
 
