@@ -5,127 +5,170 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import landscape_gradient from '../../Images/landscape_gradient.jpg';
 
-
 class Home extends Component {
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            features: [
-                {name: 'Side Nav', status: true},
-                {name: 'Scroll Nav', status: true},
-                {name: 'Nav Hover FX', status: true},
-                {name: 'Parallax Hero', status: true},
-                {name: 'Parallax Elements', status: false},
-                {name: 'Animation & Motion', status: false},
-            ],
-            templates: [
-                {name: 'Template 1', status: false}
-            ],
-            activeFeature: -1,
-            activeTemplate: -1
-        }
-    }
+    this.state = {
+      features: [
+        { name: 'Side Nav', status: true },
+        { name: 'Scroll Nav', status: true },
+        { name: 'Nav Hover FX', status: true },
+        { name: 'Parallax Hero', status: true },
+        { name: 'Parallax Elements', status: false },
+        { name: 'Animation & Motion', status: false }
+      ],
+      templates: [{ name: 'Template 1', status: false }],
+      activeFeature: -1,
+      activeTemplate: -1
+    };
+  }
 
-    enterFeature = (index) => {
-        this.setState({
-            activeFeature: index
-        }, () => {
-            document.addEventListener('mouseleave', this.leaveFeature);
-        })
-    }
-    
-    leaveFeature = () => {
-        this.setState({
-            activeFeature: -1
-        }, () => {
-            document.removeEventListener('mouseleave', this.leaveFeature);
-        })
-    }
+  enterFeature = (index) => {
+    this.setState(
+      {
+        activeFeature: index
+      },
+      () => {
+        document.addEventListener('mouseleave', this.leaveFeature);
+      }
+    );
+  };
 
-    enterTemplate = (index) => {
-        this.setState({
-            activeTemplate: index
-        }, () => {
-            document.addEventListener('mouseleave', this.leaveTemplate);
-        })
-    }
-    
-    leaveTemplate = () => {
-        this.setState({
-            activeTemplate: -1
-        }, () => {
-            document.removeEventListener('mouseleave', this.leaveTemplate);
-        })
-    }
+  leaveFeature = () => {
+    this.setState(
+      {
+        activeFeature: -1
+      },
+      () => {
+        document.removeEventListener('mouseleave', this.leaveFeature);
+      }
+    );
+  };
 
-    render() {
+  enterTemplate = (index) => {
+    this.setState(
+      {
+        activeTemplate: index
+      },
+      () => {
+        document.addEventListener('mouseleave', this.leaveTemplate);
+      }
+    );
+  };
 
-        const activeFeature = this.state.activeFeature;
-        const activeTemplate = this.state.activeTemplate;
-        const linkClass = "featureLink d-flex justify-content-center align-items-center w-100";
-        const headerClass = "featureLinkHeader changa6";
+  leaveTemplate = () => {
+    this.setState(
+      {
+        activeTemplate: -1
+      },
+      () => {
+        document.removeEventListener('mouseleave', this.leaveTemplate);
+      }
+    );
+  };
 
-        const heroHeader = "React Features.";
-        const heroSubHeader = "Use this app to test different React features and techniques e.g. navbars, parallax";
+  render() {
+    const activeFeature = this.state.activeFeature;
+    const activeTemplate = this.state.activeTemplate;
+    const linkClass =
+      'featureLink d-flex justify-content-center align-items-center w-100';
+    const headerClass = 'featureLinkHeader changa6';
 
+    const heroHeader = 'React Features.';
+    const heroSubHeader =
+      'A simple application for collating useful React features and components';
 
-        return (
-        <div>
-            <Hero 
-                image={landscape_gradient} 
-                strength={700} 
-                overlayHeight={{height: "80vh"}}
-                heroHeader={heroHeader} 
-                heroSubHeader={heroSubHeader} />
+    return (
+      <div>
+        <Hero
+          image={landscape_gradient}
+          strength={700}
+          overlayHeight={{ height: '80vh' }}
+          heroHeader={heroHeader}
+          heroSubHeader={heroSubHeader}
+        />
 
-            <Container className="container homeContainer">
-                <h1 className="changa8 white mb2" style={{fontSize: '3.5rem'}} >Features</h1>
-                <Row>
-                    {
-                        this.state.features.map((feature, index) => 
-                            <Col lg="4" className="featureCol">
-                                <Link 
-                                    to={'/feature-' + (index+1)}
-                                    className={activeFeature === index ? (feature.status ? linkClass + " featureLinkCurrent featureLinkCurrentActive" : linkClass + " featureLinkFuture featureLinkFutureActive") : (feature.status ? linkClass + " featureLinkCurrent" : linkClass + " featureLinkFuture")}
-                                    key={index}
-                                    onMouseEnter={this.enterFeature.bind(this, index)}
-                                    onMouseLeave={this.leaveFeature.bind(this)}
-                                    >
-                                    <h1 className={activeFeature === index ? headerClass + " black" : headerClass + " white" }>
-                                        {feature.name}
-                                    </h1>
-                                </Link>
-                            </Col>
-                        )
+        <Container className='container homeContainer'>
+          <h1 className='changa8 white mb2' style={{ fontSize: '3.5rem' }}>
+            Features
+          </h1>
+          <Row>
+            {this.state.features.map((feature, index) => (
+              <Col lg='4' className='featureCol'>
+                <Link
+                  to={'/feature-' + (index + 1)}
+                  className={
+                    activeFeature === index
+                      ? feature.status
+                        ? linkClass +
+                          ' featureLinkCurrent featureLinkCurrentActive'
+                        : linkClass +
+                          ' featureLinkFuture featureLinkFutureActive'
+                      : feature.status
+                      ? linkClass + ' featureLinkCurrent'
+                      : linkClass + ' featureLinkFuture'
+                  }
+                  key={index}
+                  onMouseEnter={this.enterFeature.bind(this, index)}
+                  onMouseLeave={this.leaveFeature.bind(this)}
+                >
+                  <h1
+                    className={
+                      activeFeature === index
+                        ? headerClass + ' black'
+                        : headerClass + ' white'
                     }
-                </Row>
-            </Container>
-            <Container className="container homeContainer">
-                <h1 className="changa8 white mb2" style={{fontSize: '3.5rem'}} >Templates</h1>
-                <Row>
-                    {
-                        this.state.templates.map((template, index) => 
-                            <Col lg="4" className="featureCol">
-                                <Link 
-                                    to={'/template-' + (index+1)}
-                                    className={activeTemplate === index ? (template.status ? linkClass + " featureLinkCurrent featureLinkCurrentActive" : linkClass + " featureLinkFuture featureLinkFutureActive") : (template.status ? linkClass + " featureLinkCurrent" : linkClass + " featureLinkFuture")}
-                                    key={index}
-                                    onMouseEnter={this.enterTemplate.bind(this, index)}
-                                    onMouseLeave={this.leaveTemplate.bind(this)}
-                                    >
-                                    <h1 className={activeTemplate === index ? headerClass + " black" : headerClass + " white" }>
-                                        {template.name}
-                                    </h1>
-                                </Link>
-                            </Col>
-                        )
+                  >
+                    {feature.name}
+                  </h1>
+                </Link>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+        <Container className='container homeContainer'>
+          <h1 className='changa8 white mb2' style={{ fontSize: '3.5rem' }}>
+            Templates
+          </h1>
+          <h3 className='changa8 white mb3'>coming soon...</h3>
+          {/* <Row>
+            {this.state.templates.map((template, index) => (
+              <Col lg='4' className='featureCol'>
+                <Link
+                  to={'/template-' + (index + 1)}
+                  className={
+                    activeTemplate === index
+                      ? template.status
+                        ? linkClass +
+                          ' featureLinkCurrent featureLinkCurrentActive'
+                        : linkClass +
+                          ' featureLinkFuture featureLinkFutureActive'
+                      : template.status
+                      ? linkClass + ' featureLinkCurrent'
+                      : linkClass + ' featureLinkFuture'
+                  }
+                  key={index}
+                  onMouseEnter={this.enterTemplate.bind(this, index)}
+                  onMouseLeave={this.leaveTemplate.bind(this)}
+                >
+                  <h1
+                    className={
+                      activeTemplate === index
+                        ? headerClass + ' black'
+                        : headerClass + ' white'
                     }
-                </Row>
-            </Container>
-        </div>
-        )
-    }
+                  >
+                    {template.name}
+                  </h1>
+                </Link>
+              </Col>
+            ))}
+          </Row> */}
+        </Container>
+      </div>
+    );
+  }
 }
 
-export default Home
+export default Home;
