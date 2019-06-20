@@ -24,12 +24,12 @@ const FeatureTwo = () => {
           style={{ marginTop: '50px', height: '1000px' }}
         >
           <ScrollNav />
-          <h3 className='white changa8 animated pulse animatedElement'>
+          {/* <h3 className='white changa8 animated pulse animatedElement'>
             Scroll down
           </h3>
           <p className='white changa8 downArrow animated pulse animatedElement'>
             &darr;
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

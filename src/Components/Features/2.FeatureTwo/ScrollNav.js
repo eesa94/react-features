@@ -34,29 +34,50 @@ export class Nav extends Component {
 
   render() {
     return (
-      <nav className='navigation'>
-        <div
-          className={
-            this.state.scrolled
-              ? 'navigationInner navigationInnerScrolled'
-              : 'navigationInner navigationInnerTop'
-          }
-        >
-          <img
-            src={this.state.scrolled ? brandNameBlack : brandNameWhite}
-            alt='brand'
-            className='brandImage img-fluid'
-          />
-          <ul className='linkList d-flex flex-row justify-content-center align-items-center'>
-            <li className='linkListItem'>
-              <span className='scrollNavLink'>Buy Subscription</span>
-            </li>
-            <li className='linkListItem'>
-              <span className='scrollNavLink'>My Account</span>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div>
+        <nav className='navigation'>
+          <div
+            className={
+              this.state.scrolled
+                ? 'navigationInner navigationInnerScrolled'
+                : 'navigationInner navigationInnerTop'
+            }
+          >
+            <img
+              src={this.state.scrolled ? brandNameBlack : brandNameWhite}
+              alt='brand'
+              className='brandImage img-fluid'
+            />
+            <ul className='linkList d-flex flex-row justify-content-center align-items-center'>
+              <li className='linkListItem'>
+                <span className='scrollNavLink'>Buy Subscription</span>
+              </li>
+              <li className='linkListItem'>
+                <span className='scrollNavLink'>My Account</span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        {this.state.scrolled ? (
+          <div className='scroll'>
+            <h3 className='white changa8 animated pulse animatedElement'>
+              Scroll up
+            </h3>
+            <p className='white changa8 downArrow animated pulse animatedElement'>
+              &uarr;
+            </p>
+          </div>
+        ) : (
+          <div className='scroll'>
+            <h3 className='white changa8 animated pulse animatedElement'>
+              Scroll down
+            </h3>
+            <p className='white changa8 downArrow animated pulse animatedElement'>
+              &darr;
+            </p>
+          </div>
+        )}
+      </div>
     );
   }
 }
