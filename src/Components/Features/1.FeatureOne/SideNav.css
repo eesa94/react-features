@@ -1,77 +1,92 @@
-.btn.focus, .btn:focus {
-    box-shadow: none;
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}
+
+.burgerContainer {
+  position: fixed;
+  right: 2%;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clickHere {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .burger {
-    position: fixed;
-    right: 2%;
-    top: 20%;
-    border: 3px solid black;
-    color: #000;
-    font-size: 1.6rem;
-    transition: 0.5s;
+  border: 3px solid black;
+  color: #000;
+  font-size: 1.6rem;
+  transition: 0.5s;
 }
 
 .navToggle:hover {
-    background-color: #000;
-    color: #fff;
+  background-color: #000;
+  color: #fff;
 }
 
 .sidenav {
-    height: 100vh;
-    width: 150px;
-    position: fixed;
-    top: 20%;
-    left: 0;
-    padding: 50px 0;
-    background-color: #010f18;
-    border-right: 2px solid #fff;
-    transition: 0.8s;
-    z-index: 100;
+  height: 100vh;
+  width: 150px;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  padding: 50px 0;
+  background-color: black;
+  border-right: 2px solid cyan;
+  border-top: 2px solid cyan;
+  transition: 0.8s;
+  z-index: 100;
 }
 
 .navLinkWrapper {
-    list-style-type: none;
-    padding: 0;
-    margin-left: 50%;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 50%;
 }
 
 .navLink {
-    display: block;
-    background-color: #fff;
-    margin-bottom: 20px;
-    height: 120px;
-    width: 300px;
-    border: 2px solid black;
-    transition: 0.3s;
+  display: block;
+  background-color: #fff;
+  margin-bottom: 20px;
+  height: 120px;
+  width: 300px;
+  border: 2px solid black;
+  transition: 0.3s;
 }
 
 .navLinkActive {
-    opacity: 1;
+  opacity: 1;
 }
 
 .linkInnerOne {
-    background-color: #285482;
-    border-right: 2px solid #fff;
+  /* background-color: #285482; */
+  background-color: rgba(40, 84, 130, 0.85);
+  border-right: 2px solid cyan;
 }
 
 .linkInnerOneActive {
-    border-right: 2px solid black;
+  /* border-right: 2px solid black; */
 }
 
 .linkInnerTwo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(40, 84, 130, 0.85);
-    transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(40, 84, 130, 0.85);
+  transition: 0.3s;
 }
 
 .linkInnerTwoActive {
-    background-color: rgba(40, 84, 130, 1);
+  background-color: rgba(40, 84, 130, 1);
 }
 
 .linkText {
-    font-size: 1.5rem;
-    color: #fff;
+  font-size: 1.5rem;
+  color: #fff;
 }
