@@ -29,8 +29,6 @@ class Modal extends Component {
   };
 
   render() {
-    const steps = this.props.steps;
-
     return (
       <div>
         <Button
@@ -58,9 +56,9 @@ class Modal extends Component {
                 marginBottom: '5px'
               }}
             >
-              {steps.map((step, index) => (
+              {this.props.info.map((info, index) => (
                 <li className='mb1' key={index}>
-                  <p className='modalText changa2'>{index + 1 + '. ' + step}</p>
+                  <p className='modalText changa2'>{index + 1 + '. ' + info}</p>
                 </li>
               ))}
             </ul>
