@@ -71,7 +71,7 @@ class SideNav extends Component {
           </ul>
         </nav>
         <div className='burgerContainer'>
-          <h3 className='changa6 white noMargin animated pulse clickHere'>
+          <h3 className='changa6 white noMargin animated pulse animatedElement'>
             {this.state.active
               ? 'Click here or anywhere to close ==>'
               : 'Click here to open ==>'}

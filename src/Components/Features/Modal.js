@@ -35,7 +35,7 @@ class Modal extends Component {
           className='topBarLink launchModal changa2'
           onClick={this.toggleModal}
         >
-          How to use
+          Info
         </Button>
 
         <div
@@ -62,10 +62,6 @@ class Modal extends Component {
                 </li>
               ))}
             </ul>
-            {/* <p className='modalText changa6'>
-              Note that this plugin is not compatible with mobile, as it uses an
-              img element which loses proportion.
-            </p> */}
           </div>
         </div>
       </div>

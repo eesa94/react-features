@@ -12,12 +12,6 @@
   align-items: center;
 }
 
-.clickHere {
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
 .burger {
   border: 3px solid black;
   color: #000;

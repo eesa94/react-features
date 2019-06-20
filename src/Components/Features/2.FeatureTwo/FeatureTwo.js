@@ -4,7 +4,10 @@ import ScrollNav from './ScrollNav';
 import FeatureMenu from '../FeatureMenu';
 
 const FeatureTwo = () => {
-  const infoArray = ['a', 'b', 'c', 'd'];
+  const infoArray = [
+    'An example of a top navigation bar that changes upon scrolling down the page.',
+    'A common usage of this technique is switching from a transparent to an opaque background when moving down the page, or changing the size of the text.'
+  ];
 
   return (
     <div className='container-fluid featureContainer'>
@@ -21,6 +24,12 @@ const FeatureTwo = () => {
           style={{ marginTop: '50px', height: '1000px' }}
         >
           <ScrollNav />
+          <h3 className='white changa8 animated pulse animatedElement'>
+            Scroll down
+          </h3>
+          <p className='white changa8 downArrow animated pulse animatedElement'>
+            &darr;
+          </p>
         </div>
       </div>
     </div>

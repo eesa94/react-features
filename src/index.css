@@ -38,6 +38,12 @@ button:focus {
   text-align: center;
 }
 
+.animatedElement {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
 /* layout */
 .noMargin {
   margin: 0;
