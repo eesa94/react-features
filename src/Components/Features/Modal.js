@@ -39,16 +39,16 @@ class Modal extends Component {
         </Button>
 
         <div
-          className={
-            this.state.showModal ? 'howToUse showModal' : 'howToUse hideModal'
-          }
+          className={this.state.showModal ? 'info showModal' : 'info hideModal'}
         >
           <div
             className={
               this.state.showModal ? 'showModalContent' : 'hideModalContent'
             }
           >
-            <h4 className='modalHeader changa6 mb2'>{this.props.name}</h4>
+            <h4 className='modalHeader changa6 mb2'>
+              Packages required for {this.props.name}
+            </h4>
             <ul
               style={{
                 listStyleType: 'none',

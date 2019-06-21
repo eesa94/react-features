@@ -1,8 +1,8 @@
 .featureContainer {
-    height: 1000px;
-    padding-top: 120px
+  /* height: 1000px; */
+  padding-top: 150px;
 }
 
 .featureHeader {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
