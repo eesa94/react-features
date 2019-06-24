@@ -1,66 +1,71 @@
+.scrollNavWrapper {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
 .navigation {
-  /* position: fixed; */
-  top: 20%;
-  width: 100%;
-  padding: 20px 35px;
-  margin-bottom: 100px;
-  transition: 0.5s;
-  background-color: rgba(255, 255, 255, 0);
-  z-index: 100;
+	width: 100%;
+	padding: 20px 35px;
+	margin-bottom: 100px;
+	transition: 0.5s;
+	background-color: rgba(255, 255, 255, 0);
+	z-index: 100;
 }
 
 .navigationInner {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 30px 25px;
-  transition: 0.5s;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 30px 25px;
+	transition: 0.5s;
 }
 .navigationInnerTop {
-  background-color: black;
-  width: 88%;
+	background-color: black;
+	width: 88%;
 }
 .navigationInnerScrolled {
-  background-color: white;
-  padding: 20px 35px;
-  width: 100%;
+	background-color: white;
+	padding: 20px 35px;
+	width: 100%;
 }
 
 .brandImage {
-  height: 45px;
-  transition: 0.5s;
+	height: 45px;
+	transition: 0.5s;
 }
 
 .linkList {
-  list-style-type: none;
-  margin-bottom: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
+	list-style-type: none;
+	margin-bottom: 0;
+	margin-block-end: 0;
+	padding-inline-start: 0;
 }
 
 .linkListItem {
-  margin-right: 10px;
-  min-width: 160px;
-  text-align: center;
-  font-size: 1.6rem;
+	margin-right: 10px;
+	min-width: 160px;
+	text-align: center;
+	font-size: 1.6rem;
 }
 
 .scrollNavLink {
-  width: 100%;
-  padding: 10px 15px;
-  color: #000;
-  background-color: #5fe2dd;
-  border: 2px solid #5fe2dd;
-  transition: 0.5s ease all;
+	width: 100%;
+	padding: 10px 15px;
+	color: #000;
+	background-color: #5fe2dd;
+	border: 2px solid #5fe2dd;
+	transition: 0.5s ease all;
 }
 
 .scrollNavLink:hover {
-  text-decoration: none;
-  color: #5fe2dd;
-  background-color: #fff;
-  border: 2px solid #5fe2dd;
+	text-decoration: none;
+	color: #5fe2dd;
+	background-color: #fff;
+	border: 2px solid #5fe2dd;
 }
 
 .downArrow {
-  font-size: 30px;
+	font-size: 30px;
 }
