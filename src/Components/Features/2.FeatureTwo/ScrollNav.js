@@ -59,7 +59,7 @@ export class Nav extends Component {
 					</div>
 				</nav>
 				{this.state.scrolled ? (
-					<div className="scroll">
+					<div className="prompt">
 						<h3 className="white changa8 animated pulse animatedElement">
 							Scroll up
 						</h3>
@@ -68,7 +68,7 @@ export class Nav extends Component {
 						</p>
 					</div>
 				) : (
-					<div className="scroll">
+					<div className="prompt">
 						<h3 className="white changa8 animated pulse animatedElement">
 							Scroll down
 						</h3>

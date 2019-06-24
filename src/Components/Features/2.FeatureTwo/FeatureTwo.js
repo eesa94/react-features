@@ -21,7 +21,7 @@ const FeatureTwo = () => {
 				</div>
 			</div>
 			<div className="row" style={{ height: "800px" }}>
-				<div className="col-lg-6 offset-lg-3 text-left">
+				<div className="col-lg-6 offset-lg-3 position-fixed text-left">
 					<h1 className="white changa8 mb3">How it Works</h1>
 					<p className="changa2 white howItWorksText">
 						An example of a top navigation bar that changes upon scrolling down
@@ -34,7 +34,7 @@ const FeatureTwo = () => {
 					</p>
 					<p className="changa2 white howItWorksText">
 						Requires a function to detect scroll position which can then be used
-						to style components dynamically
+						to style components dynamically.
 					</p>
 				</div>
 			</div>
