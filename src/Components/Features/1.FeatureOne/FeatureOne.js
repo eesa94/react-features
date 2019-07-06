@@ -43,10 +43,6 @@ const FeatureOne = () => {
 					</div>
 				</div>
 			</div>
-			{/* <div className="row" style={{ marginTop: "100px" }}>
-					<div className="col-lg-10 offset-lg-1">
-					</div>
-				</div> */}
 		</div>
 	);
 };

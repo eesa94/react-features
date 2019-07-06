@@ -3,13 +3,12 @@
 	left: 0;
 	width: 100%;
 	text-align: center;
-	background-color: #2b3135;
+	/* background-color: #2b3135; */
 	z-index: 200;
 }
 
 .navigation {
 	width: 100%;
-	padding: 20px 35px;
 	margin-bottom: 10px;
 	transition: 0.5s;
 	background-color: rgba(255, 255, 255, 0);
@@ -23,17 +22,18 @@
 	transition: 0.5s;
 }
 .navigationInnerTop {
-	background-color: black;
+	/* background-color: black; */
 	width: 88%;
 }
 .navigationInnerScrolled {
-	background-color: white;
+	/* background-color: white; */
 	padding: 20px 35px;
 	width: 100%;
 }
 
-.brandImage {
-	height: 45px;
+.brand {
+	font-size: 4rem;
+	letter-spacing: 2px;
 	transition: 0.5s;
 }
 
@@ -46,7 +46,6 @@
 
 .linkListItem {
 	margin-right: 10px;
-	min-width: 160px;
 	text-align: center;
 	font-size: 1.6rem;
 }
@@ -67,6 +66,6 @@
 	border: 2px solid #5fe2dd;
 }
 
-.downArrow {
+.promptArrow {
 	font-size: 30px;
 }
