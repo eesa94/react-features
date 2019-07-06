@@ -17,28 +17,26 @@ const FeatureThree = () => {
 			/>
 			<div className="row">
 				<div
-					className="col-lg-10 offset-lg-1 text-center position-fixed"
-					style={{ marginTop: "50px" }}
+					className="col-lg-10 offset-lg-1 text-center"
+					style={{ marginTop: "10px" }}
 				>
 					<Navbar />
-					<div
-						className="prompt mb3"
-						style={{
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "flex-end"
-						}}
-					>
-						<p className="white changa8 downArrow animated pulse animatedElement">
-							&uarr;
-						</p>
-						<h3 className="white changa8 animated pulse animatedElement">
-							Hover over the links
-						</h3>
+
+					<div className="promptContainer d-flex flex-row justify-content-between align-items-center">
+						<div className="dummy w-75" />
+						<div className="prompt w-25 mb1">
+							<p className="white changa8 downArrow animated pulse animatedElement">
+								&uarr;
+							</p>
+							<h3 className="white changa8 animated pulse animatedElement">
+								Hover over the links
+							</h3>
+						</div>
 					</div>
+
 					<div className="row">
 						<div className="col-lg-6 offset-lg-3 text-left">
-							<h1 className="white changa8 mb3">How it Works</h1>
+							<h1 className="white changa8 mb1">How it Works</h1>
 							<p className="howItWorksText changa2 white">
 								A simple example of individual hover effects without using CSS
 							</p>
