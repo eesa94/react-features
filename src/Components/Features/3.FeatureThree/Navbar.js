@@ -14,7 +14,7 @@ class Navbar extends Component {
 
 	render() {
 		return (
-			<nav className="d-flex flex-row justify-content-between align-items-center mb3">
+			<nav className="hoverNav d-flex flex-row justify-content-between align-items-center mb3">
 				<div className="brandContainer">
 					<Link to="/" className="brandLink">
 						<h1 className="brandName changa-8">Brand</h1>

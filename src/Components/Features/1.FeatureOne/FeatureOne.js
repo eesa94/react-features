@@ -9,7 +9,7 @@ const FeatureOne = () => {
 	return (
 		<div className="container-fluid featureContainer">
 			<SideNav />
-			<div className="row">
+			<div className="row" style={{ marginTop: "100px" }}>
 				<div className="col-6 offset-3">
 					<FeatureMenu
 						name={"Side Nav"}

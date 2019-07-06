@@ -3,15 +3,16 @@
 	left: 0;
 	width: 100%;
 	text-align: center;
+	background-color: #2b3135;
+	z-index: 200;
 }
 
 .navigation {
 	width: 100%;
 	padding: 20px 35px;
-	margin-bottom: 100px;
+	margin-bottom: 10px;
 	transition: 0.5s;
 	background-color: rgba(255, 255, 255, 0);
-	z-index: 100;
 }
 
 .navigationInner {
@@ -61,7 +62,7 @@
 
 .scrollNavLink:hover {
 	text-decoration: none;
-	color: #5fe2dd;
+	color: black;
 	background-color: #fff;
 	border: 2px solid #5fe2dd;
 }

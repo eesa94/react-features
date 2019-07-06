@@ -60,19 +60,19 @@ export class Nav extends Component {
 				</nav>
 				{this.state.scrolled ? (
 					<div className="prompt">
-						<h3 className="white changa8 animated pulse animatedElement">
+						<h3 className="cyan changa8 animated pulse animatedElement">
 							Scroll up
 						</h3>
-						<p className="white changa8 downArrow animated pulse animatedElement">
+						<p className="cyan changa8 downArrow animated pulse animatedElement">
 							&uarr;
 						</p>
 					</div>
 				) : (
 					<div className="prompt">
-						<h3 className="white changa8 animated pulse animatedElement">
+						<h3 className="cyan changa8 animated pulse animatedElement">
 							Scroll down
 						</h3>
-						<p className="white changa8 downArrow animated pulse animatedElement">
+						<p className="cyan changa8 downArrow animated pulse animatedElement">
 							&darr;
 						</p>
 					</div>
