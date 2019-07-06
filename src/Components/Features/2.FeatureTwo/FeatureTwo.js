@@ -10,7 +10,7 @@ const FeatureTwo = () => {
 		<div>
 			<ScrollNav />
 			<div className="container-fluid featureContainer">
-				<div className="row" style={{ paddingTop: "250px" }}>
+				<div className="row" style={{ paddingTop: "180px" }}>
 					<div className="col-6 offset-3">
 						<FeatureMenu
 							name={"Scroll Nav"}
@@ -21,7 +21,7 @@ const FeatureTwo = () => {
 						/>
 
 						<div className="row">
-							<div className="col-10-offset-1">
+							<div className="col-10 offset-1">
 								<h1 className="white changa8 mb3">How it Works</h1>
 								<p className="changa2 white howItWorksText">
 									An example of a top navigation bar that changes upon scrolling

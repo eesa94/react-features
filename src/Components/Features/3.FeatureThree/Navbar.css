@@ -1,9 +1,14 @@
+.hoverNavWrapper {
+	position: fixed;
+	width: 100%;
+	z-index: 200;
+}
+
 .hoverNav {
 	height: 80px;
 	width: 100%;
 	padding: 0 50px;
 	background-color: #41526f;
-	z-index: 100;
 }
 
 .brandLink:hover {
