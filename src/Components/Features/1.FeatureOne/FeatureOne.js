@@ -8,18 +8,18 @@ const FeatureOne = () => {
 
 	return (
 		<div className="container-fluid featureContainer">
-			<FeatureMenu
-				name={"Side Nav"}
-				source={
-					"https://github.com/eesa94/react-features/tree/master/src/Components/Features/1.FeatureOne"
-				}
-				info={infoArray}
-			/>
-			<div className="row" style={{ marginTop: "100px" }}>
-				<div className="col-lg-10 offset-lg-1">
-					<SideNav />
+			<SideNav />
+			<div className="row">
+				<div className="col-6 offset-3">
+					<FeatureMenu
+						name={"Side Nav"}
+						source={
+							"https://github.com/eesa94/react-features/tree/master/src/Components/Features/1.FeatureOne"
+						}
+						info={infoArray}
+					/>
 					<div className="row">
-						<div className="col-lg-6 offset-lg-3">
+						<div className="col-10 offset-1">
 							<h1 className="white changa8 mb3">How it Works</h1>
 							<p className="changa2 white howItWorksText">
 								This is an example of an off-canvas side navigation component.
@@ -43,6 +43,10 @@ const FeatureOne = () => {
 					</div>
 				</div>
 			</div>
+			{/* <div className="row" style={{ marginTop: "100px" }}>
+					<div className="col-lg-10 offset-lg-1">
+					</div>
+				</div> */}
 		</div>
 	);
 };

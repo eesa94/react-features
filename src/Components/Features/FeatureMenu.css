@@ -21,12 +21,10 @@
 }
 
 .topBar {
-	top: 3%;
-	left: 2%;
 	padding: 15px 20px 10px;
 	background-color: #2b3135;
 	border-bottom: 2px solid cyan;
-	z-index: 200;
+	margin-bottom: 50px;
 }
 
 .topBarLink {
