@@ -56,11 +56,25 @@ class Modal extends Component {
                 marginBottom: '5px'
               }}
             >
-              {this.props.info.map((info, index) => (
-                <li className='mb1' key={index}>
-                  <p className='modalText changa2'>{index + 1 + '. ' + info}</p>
-                </li>
-              ))}
+              {this.props.info.length === 0 ? (
+                <p className='modalText changa2'>
+                  No additional packages required
+                </p>
+              ) : (
+                this.props.info.map((info, index) => (
+                  <li className='mb1' key={index}>
+                    <a
+                      href={info.link}
+                      className='modalText changa2 black'
+                      target='_blank'
+                      noopener
+                      noreferrer
+                    >
+                      {index + 1 + '. ' + info.plugin}
+                    </a>
+                  </li>
+                ))
+              )}
             </ul>
           </div>
         </div>

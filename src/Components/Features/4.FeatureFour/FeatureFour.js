@@ -24,7 +24,12 @@ class FeatureFour extends Component {
   };
 
   render() {
-    const infoArray = ['react-parallax'];
+    const infoArray = [
+      {
+        plugin: 'react-parallax',
+        link: 'https://www.npmjs.com/package/react-parallax'
+      }
+    ];
 
     return (
       <div className='container-fluid featureContainer' style={{ padding: 0 }}>

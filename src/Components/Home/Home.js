@@ -95,7 +95,7 @@ class Home extends Component {
           </h1>
           <Row>
             {this.state.features.map((feature, index) => (
-              <Col lg='4' className='featureCol'>
+              <Col lg='4' className='featureCol' key={index}>
                 <Link
                   to={'/feature-' + (index + 1)}
                   className={
@@ -109,7 +109,6 @@ class Home extends Component {
                       ? linkClass + ' featureLinkCurrent'
                       : linkClass + ' featureLinkFuture'
                   }
-                  key={index}
                   onMouseEnter={this.enterFeature.bind(this, index)}
                   onMouseLeave={this.leaveFeature.bind(this)}
                 >
