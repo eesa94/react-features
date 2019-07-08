@@ -75,9 +75,9 @@ class Home extends Component {
       'featureLink d-flex justify-content-center align-items-center w-100';
     const headerClass = 'featureLinkHeader changa6';
 
-    const heroHeader = 'React Features.';
+    const heroHeader = 'React Experiments.';
     const heroSubHeader =
-      'A simple application for collating useful React features and components';
+      'A simple application for experimenting with cool npm packages, testing components, and building layout templates.';
 
     return (
       <div>
