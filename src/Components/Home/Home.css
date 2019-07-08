@@ -1,66 +1,63 @@
 .homeContainer {
-  padding-top: 80px;
+	padding-top: 80px;
 }
 
 .featureCol {
-  display: flex;
-  align-items: center;
-  margin-bottom: 45px;
-  text-align: center;
+	display: flex;
+	align-items: center;
+	margin-bottom: 45px;
+	text-align: center;
 }
 
 .featureLink:before {
-  content: '';
-  position: absolute;
-  top: -5%;
-  left: 0;
-  z-index: 2;
-  width: 90%;
-  height: 10%;
-  -webkit-transform: skewY(-3deg);
-  transform: skewY(-3deg);
-  /* background-color: cyan; */
-  transition: 0.5s;
-  border-radius: 25px;
+	content: "";
+	position: absolute;
+	top: -4%;
+	left: 0;
+	z-index: 2;
+	width: 10%;
+	height: 10%;
+	background-color: #00ffff;
+	transition: 0.5s;
+	border-radius: 25px;
 }
 
 .featureLink:hover:before {
-  /* background-color: cyan; */
-  /* border: 1px solid #2b3135; */
-  -webkit-transform: skewY(-12deg);
-  transform: skewY(-12deg);
+	background-color: #f9f871;
+	box-shadow: 1px 1px 0px grey;
+	width: 90%;
 }
 
 .featureLink {
-  height: 100px;
-  padding: 10px 15px;
-  transition: 0.5s;
+	height: 100px;
+	padding: 10px 15px;
+	transition: 0.5s;
 }
 
 .featureLinkCurrent {
-  border: 3px solid cyan;
+	border: 3px solid #00ffff;
 }
 
 .featureLinkFuture {
-  border: 3px solid grey;
+	border: 3px solid grey;
 }
 
 .featureLinkCurrentActive {
-  text-decoration: none !important;
-  background-color: cyan;
+	text-decoration: none !important;
+	background-color: cyan;
 }
 
 .featureLinkFutureActive {
-  text-decoration: none !important;
-  background-color: grey;
+	text-decoration: none !important;
+	background-color: grey;
 }
 
 .featureLinkHeader {
-  font-size: 2.5rem;
+	font-size: 2.5rem;
 }
 
 .featureHeader {
-  margin-bottom: 0;
-  letter-spacing: 1.15px;
-  transition: 0.5s;
+	margin-bottom: 0;
+	letter-spacing: 1.15px;
+	transition: 0.5s;
 }
