@@ -67,8 +67,7 @@ class Modal extends Component {
                       href={info.link}
                       className='modalText changa2 black'
                       target='_blank'
-                      noopener
-                      noreferrer
+                      rel='noopener noreferrer'
                     >
                       {index + 1 + '. ' + info.plugin}
                     </a>
