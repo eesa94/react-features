@@ -3,7 +3,6 @@ import './Home.css';
 import Hero from '../Hero/Hero';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
-import landscape_gradient from '../../Images/landscape_gradient.jpg';
 import pawel_czerwinski_fPN1w7bIuNU_unsplash from '../../Images/pawel_czerwinski_fPN1w7bIuNU_unsplash.jpg';
 
 class Home extends Component {

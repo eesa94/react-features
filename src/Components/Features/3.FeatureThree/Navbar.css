@@ -8,7 +8,7 @@
   height: 80px;
   width: 100%;
   padding: 0 50px;
-  background-color: #324b4b;
+  background-color: #285482;
 }
 
 .brandLink:hover {
@@ -44,8 +44,25 @@ button:focus {
   transition: 0.5s;
 }
 
-.menuLinkActive {
+/* .menuLinkActive {
   color: #f87ce5 !important;
+  text-decoration: none !important;
+} */
+
+.menuLinkActive1 {
+  color: #f87ce5 !important;
+  text-decoration: none !important;
+}
+.menuLinkActive2 {
+  color: #39ff6b !important;
+  text-decoration: none !important;
+}
+.menuLinkActive3 {
+  color: #fffb23 !important;
+  text-decoration: none !important;
+}
+.menuLinkActive4 {
+  color: #a17cf8 !important;
   text-decoration: none !important;
 }
 
@@ -56,10 +73,26 @@ button:focus {
   width: 0;
   margin: 0 auto;
   height: 6px;
-  background-color: #f87ce5;
   transition: 0.5s;
 }
 
-.linkUnderlineActive {
+/* .linkUnderlineActive {
   width: 80%;
+} */
+
+.linkUnderlineActive1 {
+  width: 80%;
+  background-color: #f87ce5;
+}
+.linkUnderlineActive2 {
+  width: 80%;
+  background-color: #39ff6b;
+}
+.linkUnderlineActive3 {
+  width: 80%;
+  background-color: #fffb23;
+}
+.linkUnderlineActive4 {
+  width: 80%;
+  background-color: #a17cf8;
 }

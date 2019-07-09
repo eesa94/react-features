@@ -49,8 +49,11 @@ class NavLink extends Component {
     const linkHome = '/';
     // variable for other links apart from home - remove white space
     const linkOther = link.toLowerCase().replace(/\s+/g, '');
-
-    const menuLinkClass = 'menuLink changa6';
+    // these are the classnames to toggle when the links are active and inactive
+    const activeMenuLink = `menuLink changa6 menuLinkActive${index + 1}`;
+    const inactiveMenuLink = 'menuLink changa6';
+    const activeLinkUnderline = `linkUnderline linkUnderlineActive${index + 1}`;
+    const inactiveLinkUnderline = 'linkUnderline';
 
     return (
       <li
@@ -61,9 +64,7 @@ class NavLink extends Component {
         <Link
           to={index === 0 ? linkHome : linkOther}
           className={
-            this.state.activeLink === index
-              ? menuLinkClass + ' menuLinkActive'
-              : menuLinkClass
+            this.state.activeLink === index ? activeMenuLink : inactiveMenuLink
           }
           onClick={this.handleClick}
         >
@@ -72,8 +73,8 @@ class NavLink extends Component {
         <div
           className={
             this.state.activeLink === index
-              ? 'linkUnderline linkUnderlineActive'
-              : 'linkUnderline'
+              ? activeLinkUnderline
+              : inactiveLinkUnderline
           }
         />
       </li>

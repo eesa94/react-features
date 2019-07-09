@@ -33,7 +33,7 @@
   );
 }
 
-.featureLink:after {
+/* .featureLink:after {
   content: '';
   position: absolute;
   top: -2%;
@@ -51,7 +51,7 @@
   transform: translate(0px, 15px) rotate(4deg);
   transition-delay: 0.3s;
   width: 105%;
-}
+} */
 
 .featureLink {
   position: relative;
@@ -83,6 +83,7 @@
 .featureLinkHeader {
   font-size: 2.5rem;
   transition: 0.5s;
+  transition-delay: 0.2s;
 }
 
 .featureHeader {
