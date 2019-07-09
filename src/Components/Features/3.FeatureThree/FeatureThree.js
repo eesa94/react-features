@@ -24,7 +24,9 @@ const FeatureThree = () => {
               <div className='col-10 offset-1'>
                 <h1 className='white changa8 mb1'>How it Works</h1>
                 <p className='howItWorksText changa2 white'>
-                  A simple example of individual hover effects without using CSS
+                  A simple example of individual hover effects, using changes in
+                  state to toggle classes, instead of using the CSS hover
+                  property.
                 </p>
                 <p className='howItWorksText changa2 white'>
                   The outer Navbar component contains an array of links which

@@ -4,6 +4,7 @@ import Hero from '../Hero/Hero';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import landscape_gradient from '../../Images/landscape_gradient.jpg';
+import pawel_czerwinski_fPN1w7bIuNU_unsplash from '../../Images/pawel_czerwinski_fPN1w7bIuNU_unsplash.jpg';
 
 class Home extends Component {
   constructor(props) {
@@ -75,14 +76,14 @@ class Home extends Component {
       'featureLink d-flex justify-content-center align-items-center w-100';
     const headerClass = 'featureLinkHeader changa6';
 
-    const heroHeader = 'React Experiments.';
+    const heroHeader = 'React Playground.';
     const heroSubHeader =
       'A simple application for experimenting with cool npm packages, testing components, and building layout templates.';
 
     return (
       <div>
         <Hero
-          image={landscape_gradient}
+          image={pawel_czerwinski_fPN1w7bIuNU_unsplash}
           strength={700}
           overlayHeight={{ height: '80vh' }}
           heroHeader={heroHeader}
@@ -90,7 +91,7 @@ class Home extends Component {
         />
 
         <Container className='container homeContainer'>
-          <h1 className='pageHeader changa6'>Features</h1>
+          <h1 className='pageHeader changa6'>Components</h1>
           <Row>
             {this.state.features.map((feature, index) => (
               <Col lg='4' className='featureCol' key={index}>

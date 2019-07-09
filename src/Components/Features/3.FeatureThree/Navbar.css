@@ -1,77 +1,65 @@
 .hoverNavWrapper {
-	position: fixed;
-	width: 100%;
-	z-index: 200;
+  position: fixed;
+  width: 100%;
+  z-index: 200;
 }
 
 .hoverNav {
-	height: 80px;
-	width: 100%;
-	padding: 0 50px;
-	background-color: #41526f;
+  height: 80px;
+  width: 100%;
+  padding: 0 50px;
+  background-color: #324b4b;
 }
 
 .brandLink:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .brandName {
-	font-size: 4.5rem;
-	margin: 0 20px 0 0;
-	color: #5dfdd1;
+  font-size: 4.5rem;
+  margin: 0 20px 0 0;
+  color: #00ffff;
 }
 
 button:focus {
-	outline: none;
-}
-
-.menuContainer {
-	position: absolute;
-	top: -200%;
-	left: 0;
-	height: 100vh;
-	width: 100%;
-	background-color: rgba(65, 82, 111, 0.9);
-	transition: 0.7s;
-	z-index: 200;
-	overflow: hidden;
+  outline: none;
 }
 
 .menuList {
-	list-style-type: none;
-	padding-inline-start: 0;
-	margin-bottom: 0;
-	margin-block-start: 0;
-	margin-block-end: 0;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .menuListItem {
-	margin: 3px 30px 0 0;
-	transition: 0.5s;
+  margin: 3px 30px 0 0;
+  transition: 0.5s;
 }
 
 .menuLink {
-	font-size: 2rem;
-	color: #5dfdd1;
-	transition: 0.5s;
+  font-size: 2rem;
+  color: #00ffff;
+  transition: 0.5s;
 }
 
 .menuLinkActive {
-	color: #fd5df7 !important;
-	text-decoration: none !important;
+  color: #f87ce5 !important;
+  text-decoration: none !important;
 }
 
 .linkUnderline {
-	position: relative;
-	bottom: 10px;
-	left: 7px;
-	width: 0;
-	margin: 0 auto;
-	height: 6px;
-	background-color: #fd5df7;
-	transition: 0.5s;
+  position: relative;
+  bottom: 10px;
+  left: 7px;
+  width: 0;
+  margin: 0 auto;
+  height: 6px;
+  background-color: #f87ce5;
+  transition: 0.5s;
 }
 
 .linkUnderlineActive {
-	width: 80%;
+  width: 80%;
 }
