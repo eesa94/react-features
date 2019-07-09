@@ -90,9 +90,7 @@ class Home extends Component {
         />
 
         <Container className='container homeContainer'>
-          <h1 className='changa8 white mb2' style={{ fontSize: '3.5rem' }}>
-            Features
-          </h1>
+          <h1 className='pageHeader changa6'>Features</h1>
           <Row>
             {this.state.features.map((feature, index) => (
               <Col lg='4' className='featureCol' key={index}>
@@ -127,9 +125,7 @@ class Home extends Component {
           </Row>
         </Container>
         <Container className='container homeContainer'>
-          <h1 className='changa8 white mb2' style={{ fontSize: '3.5rem' }}>
-            Templates
-          </h1>
+          <h1 className='pageHeader changa6'>Templates</h1>
           <h3 className='changa8 white mb3'>coming soon...</h3>
           {/* <Row>
             {this.state.templates.map((template, index) => (
