@@ -1,63 +1,82 @@
 .homeContainer {
-	padding-top: 80px;
+  padding-top: 80px;
 }
 
 .featureCol {
-	display: flex;
-	align-items: center;
-	margin-bottom: 45px;
-	text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+  text-align: center;
 }
 
 .featureLink:before {
-	content: "";
-	position: absolute;
-	top: -4%;
-	left: 0;
-	z-index: 2;
-	width: 10%;
-	height: 10%;
-	background-color: #00ffff;
-	transition: 0.5s;
-	border-radius: 25px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background-color: #00ffff;
+  transition: 0.5s;
 }
 
 .featureLink:hover:before {
-	background-color: #f9f871;
-	box-shadow: 1px 1px 0px grey;
-	width: 90%;
+  width: 100%;
+}
+
+.featureLink:after {
+  content: '';
+  position: absolute;
+  top: -2%;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #00ffff;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.featureLink:hover:after {
+  opacity: 1;
+  transform: translate(0px, 15px) rotate(4deg);
+  width: 105%;
 }
 
 .featureLink {
-	height: 100px;
-	padding: 10px 15px;
-	transition: 0.5s;
+  position: relative;
+  height: 100px;
+  padding: 10px 15px;
+  transition: 0.5s;
+  z-index: 2;
 }
 
 .featureLinkCurrent {
-	border: 3px solid #00ffff;
+  border: 3px solid #00ffff;
 }
 
 .featureLinkFuture {
-	border: 3px solid grey;
+  border: 3px solid grey;
 }
 
 .featureLinkCurrentActive {
-	text-decoration: none !important;
-	background-color: cyan;
+  text-decoration: none !important;
+  /* background-color: cyan; */
+  box-shadow: 5px 5px 5px 3px black;
 }
 
 .featureLinkFutureActive {
-	text-decoration: none !important;
-	background-color: grey;
+  text-decoration: none !important;
+  background-color: grey;
 }
 
 .featureLinkHeader {
-	font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .featureHeader {
-	margin-bottom: 0;
-	letter-spacing: 1.15px;
-	transition: 0.5s;
+  margin-bottom: 0;
+  letter-spacing: 1.15px;
+  transition: 0.5s;
 }

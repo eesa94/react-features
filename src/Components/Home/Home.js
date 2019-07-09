@@ -14,9 +14,9 @@ class Home extends Component {
         { name: 'Side Nav', status: true },
         { name: 'Scroll Nav', status: true },
         { name: 'Nav Hover FX', status: true },
-        { name: 'Parallax Hero', status: true },
-        { name: 'Parallax Elements', status: false },
-        { name: 'Animation & Motion', status: false }
+        { name: 'Parallax Hero', status: true }
+        // { name: 'Parallax Elements', status: false }
+        // { name: 'Animation & Motion', status: false }
       ],
       templates: [{ name: 'Template 1', status: false }],
       activeFeature: -1,
