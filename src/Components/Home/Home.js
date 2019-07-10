@@ -4,6 +4,7 @@ import Hero from '../Hero/Hero';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import pawel_czerwinski_fPN1w7bIuNU_unsplash from '../../Images/pawel_czerwinski_fPN1w7bIuNU_unsplash.jpg';
+import { H1Header } from '../../Styles/CommonStyles';
 
 class Home extends Component {
   constructor(props) {
@@ -94,7 +95,7 @@ class Home extends Component {
         />
 
         <Container className='componentContainer'>
-          <h1 className='pageHeader changa6'>Components</h1>
+          <H1Header>Components</H1Header>
           <Row>
             {this.state.features.map((feature, index) => (
               <Col lg='4' className='featureCol' key={index}>
@@ -129,8 +130,7 @@ class Home extends Component {
           </Row>
         </Container>
         <Container className='templateContainer'>
-          <h1 className='pageHeader changa6'>Templates</h1>
-          <h3 className='changa8 white mb3'>coming soon...</h3>
+          <H1Header>Templates</H1Header>
           <Row>
             {this.state.templates.map((template, index) => (
               <Col lg='4' className='featureCol'>
