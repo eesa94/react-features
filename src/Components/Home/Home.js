@@ -18,7 +18,12 @@ class Home extends Component {
         // { name: 'Parallax Elements', status: false }
         // { name: 'Animation & Motion', status: false }
       ],
-      templates: [{ name: 'Template 1', status: false }],
+      templates: [
+        { name: 'Template 1', status: true },
+        { name: 'Template 2', status: true },
+        { name: 'Template 3', status: true },
+        { name: 'Template 4', status: true }
+      ],
       activeFeature: -1,
       activeTemplate: -1
     };
@@ -80,7 +85,7 @@ class Home extends Component {
       'A simple application for experimenting with cool npm packages, testing components, and building layout templates.';
 
     return (
-      <div>
+      <div className='position-relative'>
         <Hero
           image={pawel_czerwinski_fPN1w7bIuNU_unsplash}
           strength={700}
@@ -89,7 +94,7 @@ class Home extends Component {
           heroSubHeader={heroSubHeader}
         />
 
-        <Container className='container homeContainer'>
+        <Container className='componentContainer'>
           <h1 className='pageHeader changa6'>Components</h1>
           <Row>
             {this.state.features.map((feature, index) => (
@@ -124,10 +129,10 @@ class Home extends Component {
             ))}
           </Row>
         </Container>
-        <Container className='container homeContainer'>
+        <Container className='templateContainer'>
           <h1 className='pageHeader changa6'>Templates</h1>
           <h3 className='changa8 white mb3'>coming soon...</h3>
-          {/* <Row>
+          <Row>
             {this.state.templates.map((template, index) => (
               <Col lg='4' className='featureCol'>
                 <Link
@@ -159,7 +164,7 @@ class Home extends Component {
                 </Link>
               </Col>
             ))}
-          </Row> */}
+          </Row>
         </Container>
       </div>
     );
