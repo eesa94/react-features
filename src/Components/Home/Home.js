@@ -14,15 +14,14 @@ class Home extends Component {
         { name: 'Side Nav', status: true },
         { name: 'Scroll Nav', status: true },
         { name: 'Nav Hover FX', status: true },
-        { name: 'Parallax Hero', status: true }
-        // { name: 'Parallax Elements', status: false }
-        // { name: 'Animation & Motion', status: false }
+        { name: 'Parallax Hero', status: true },
+        { name: 'Parallax Elements', status: false },
+        { name: 'Animation & Motion', status: false }
       ],
       templates: [
-        { name: 'Template 1', status: true },
-        { name: 'Template 2', status: true },
-        { name: 'Template 3', status: true },
-        { name: 'Template 4', status: true }
+        { name: 'Template 1', status: false },
+        { name: 'Template 2', status: false },
+        { name: 'Template 3', status: false }
       ],
       activeFeature: -1,
       activeTemplate: -1
@@ -100,7 +99,7 @@ class Home extends Component {
             {this.state.features.map((feature, index) => (
               <Col lg='4' className='featureCol' key={index}>
                 <Link
-                  to={'/feature-' + (index + 1)}
+                  to={feature.status ? '/feature-' + (index + 1) : ''}
                   className={
                     activeFeature === index
                       ? feature.status
@@ -136,7 +135,7 @@ class Home extends Component {
             {this.state.templates.map((template, index) => (
               <Col lg='4' className='featureCol'>
                 <Link
-                  to={'/template-' + (index + 1)}
+                  to={template.status ? '/template-' + (index + 1) : ''}
                   className={
                     activeTemplate === index
                       ? template.status
