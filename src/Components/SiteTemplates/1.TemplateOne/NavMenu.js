@@ -8,6 +8,7 @@ const styles = {
     top: '100px',
     left: '15%',
     right: '15%',
+    display: 'flex',
     backgroundColor: 'white',
     transition: '0.5s',
     opacity: 0
@@ -39,7 +40,12 @@ const styles = {
     color: 'white',
     fontFamily: 'Changa, sans-serif',
     fontWeight: 800,
-    transition: '0.3s'
+    transition: '0.6s'
+  },
+  menuSectionTwo: {
+    height: '100%',
+    width: '50%',
+    backgroundColor: '#192730'
   }
 };
 
@@ -52,7 +58,7 @@ const activeStyles = {
 
 const hoverStyles = {
   overlay: {
-    backgroundColor: 'rgba(74,74,74,0)'
+    backgroundColor: 'rgba(74,74,74,0.7)'
   },
   button: {
     backgroundColor: 'rgba(210, 11, 33, 1)'
@@ -108,6 +114,9 @@ class NavMenu extends Component {
               ABOUT US
             </button>
           </div>
+        </div>
+        <div className='menuSectionTwo' style={styles.menuSectionTwo}>
+          <p>hello</p>
         </div>
       </div>
     );
