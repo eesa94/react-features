@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
-import Barburrito from './Barburrito';
+import Navbar from './Navbar';
 
 export class TemplateOne extends Component {
   render() {
@@ -11,7 +11,7 @@ export class TemplateOne extends Component {
 
     return (
       <Container fluid style={container}>
-        <Barburrito />
+        <Navbar />
       </Container>
     );
   }
