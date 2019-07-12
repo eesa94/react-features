@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
-import Lexus from './Lexus';
+import Barburrito from './Barburrito';
 
 export class TemplateOne extends Component {
   render() {
@@ -11,7 +11,7 @@ export class TemplateOne extends Component {
 
     return (
       <Container fluid style={container}>
-        <Lexus />
+        <Barburrito />
       </Container>
     );
   }
