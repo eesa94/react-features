@@ -2,20 +2,19 @@
 .componentContainer,
 .templateContainer {
   padding-top: 120px;
+  min-height: 500px;
+  margin-bottom: 100px;
 }
 
 .componentContainer:before {
   content: '';
   position: absolute;
-  top: 36%;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
-  transform: skewY(-20deg);
-  /* background-color: #033169; */
-  background-color: #016dc1;
-  border-top: 5px solid white;
-  border-bottom: 5px solid white;
+  height: 76%;
+  transform: skewY(-3deg);
+  background-color: rgba(3, 49, 105, 0.26);
   z-index: -1;
 }
 
@@ -27,10 +26,7 @@
   width: 100%;
   height: 40%;
   transform: skewY(-3deg);
-  background-color: #5f3299;
-  /* background-color: #ad2fb3; */
-  border-top: 5px solid white;
-  border-bottom: 5px solid white;
+  background-color: rgba(95, 50, 153, 0.44);
   z-index: -1;
 }
 
@@ -38,14 +34,15 @@
 .featureCol {
   display: flex;
   align-items: center;
-  margin-bottom: 45px;
+  margin-bottom: 70px;
   text-align: center;
+  min-height: 150px;
 }
 
 /* General feature link styling */
 .featureLink {
   position: relative;
-  height: 100px;
+  height: 100%;
   padding: 10px 15px;
   transition: 1.5s;
   z-index: 2;
