@@ -1,9 +1,47 @@
 import React, { Component } from 'react';
-import './SideNav.css';
 import SideNavLink from './SideNavLink';
 import { Squeeze } from 'react-burgers';
 import onClickOutside from 'react-onclickoutside';
 import { Prompt } from '../../../Styles/CommonStyles';
+import styled from 'styled-components';
+
+const Nav = styled.nav`
+  height: 100vh;
+  width: 150px;
+  position: fixed;
+  top: 0;
+  padding: 50px 0;
+  background-color: #141517;
+  border-right: 2px solid cyan;
+  transition: 0.8s;
+  z-index: 100;
+`;
+
+const NavLinkWrapper = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin-left: 50%;
+`;
+
+const BurgerContainer = styled.div`
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #141517;
+  padding: 0 10px;
+`;
+
+const styles = {
+  burger: {
+    border: '3px solid black',
+    color: '#000',
+    fontSize: '1.6rem',
+    transition: '0.5s'
+  }
+};
 
 class SideNav extends Component {
   constructor(props) {
@@ -58,9 +96,9 @@ class SideNav extends Component {
 
   render() {
     return (
-      <div className='navigationContainer'>
-        <nav className='sidenav' style={this.state}>
-          <ul className='navLinkWrapper'>
+      <div>
+        <Nav style={{ left: this.state.left }}>
+          <NavLinkWrapper>
             {this.state.links.map((link, index) => (
               <SideNavLink
                 key={index}
@@ -69,9 +107,9 @@ class SideNav extends Component {
                 onClick={this.toggleBurger}
               />
             ))}
-          </ul>
-        </nav>
-        <div className='burgerContainer'>
+          </NavLinkWrapper>
+        </Nav>
+        <BurgerContainer>
           <Prompt>
             <h3 className='changa6 noMargin animated pulse animatedElement'>
               {this.state.active
@@ -84,14 +122,14 @@ class SideNav extends Component {
             lineHeight={3}
             lineSpacing={4}
             color='cyan'
-            className='burger'
+            style={styles.burger}
             active={this.state.active}
             onClick={() => {
               this.toggleBurger();
               this.navOpen();
             }}
           />
-        </div>
+        </BurgerContainer>
       </div>
     );
   }

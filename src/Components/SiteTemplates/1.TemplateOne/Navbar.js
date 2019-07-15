@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Squeeze } from 'react-burgers';
 import NavMenu from './NavMenu';
+import onClickOutside from 'react-onclickoutside';
 
 const styles = {
   navbar: {
@@ -18,14 +19,14 @@ const styles = {
     zIndex: 3
   },
   header: {
-    color: '#d20b21',
+    color: '#00ffff',
     transition: '0.3s'
   }
 };
 
 const hoveredStyles = {
   navbar: {
-    backgroundColor: 'rgba(210, 11, 33, 1)'
+    backgroundColor: '#00ffff'
   },
   header: {
     color: '#fff'
@@ -66,6 +67,13 @@ class Navbar extends Component {
     );
   };
 
+  handleClickOutside = () => {
+    this.setState({
+      active: false,
+      hovered: false
+    });
+  };
+
   render() {
     return (
       <div>
@@ -92,7 +100,7 @@ class Navbar extends Component {
             width={30}
             lineHeight={3}
             lineSpacing={4}
-            color={this.state.hovered ? '#fff' : '#d20b21'}
+            color={this.state.hovered ? '#fff' : '#00ffff'}
             className='burger'
             active={this.state.active}
             onClick={() => {
@@ -106,4 +114,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default onClickOutside(Navbar);

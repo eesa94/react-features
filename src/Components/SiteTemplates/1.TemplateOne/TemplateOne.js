@@ -1,23 +1,20 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import Navbar from './Navbar';
 import FeatureMenu from '../../CommonComponents/FeatureMenu';
+import HowItWorks from '../../CommonComponents/HowItWorks';
+import Navbar from './Navbar';
 
-const styles = {
-  container: {
-    height: '100vh',
-    padding: 0
-  },
-  row: {
-    marginTop: '200px'
-  }
-};
+const howItWorksArray = [
+  "A template based on Barburrito's navbar.",
+  'Clicking the burger toggles a menu which is divided into two sections.',
+  'Hovering over the first section reveals the background image, while the second section contains links to different pages.'
+];
 
 const TemplateOne = () => {
   return (
-    <Container fluid style={styles.container}>
+    <Container fluid className='featureContainer'>
       <Navbar />
-      <Row style={styles.row}>
+      <Row style={{ marginTop: '200px' }}>
         <Col xs={{ size: 6, offset: 3 }}>
           <FeatureMenu
             name={'Barburrito Navigation'}
@@ -26,7 +23,7 @@ const TemplateOne = () => {
           />
           <Row>
             <Col xs={{ size: 10, offset: 1 }}>
-              <h1 className='white changa8 mb3'>How it Works</h1>
+              <HowItWorks howItWorksArray={howItWorksArray} />
             </Col>
           </Row>
         </Col>

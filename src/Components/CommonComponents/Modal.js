@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './FeatureMenu.css';
-import { Button } from 'reactstrap';
 import onClickOutside from 'react-onclickoutside';
+import { Button } from './FeatureMenu';
 
 class Modal extends Component {
   constructor(props) {
@@ -31,10 +31,7 @@ class Modal extends Component {
   render() {
     return (
       <div>
-        <Button
-          className='topBarLink launchModal changa2'
-          onClick={this.toggleModal}
-        >
+        <Button className='btn btn-secondary' onClick={this.toggleModal}>
           Info
         </Button>
 

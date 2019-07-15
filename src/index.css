@@ -29,6 +29,11 @@ button:focus {
   animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}
+
 /* layout */
 .featureContainer {
   padding-bottom: 50px;

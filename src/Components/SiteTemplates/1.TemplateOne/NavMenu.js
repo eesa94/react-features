@@ -3,9 +3,9 @@ import jessicalewis from '../../../Images/jessicalewis.jpg';
 
 const styles = {
   navMenuWrapper: {
-    height: 0,
+    height: 'calc(100vh - 200px',
     position: 'fixed',
-    top: '100px',
+    top: '-100%',
     left: '15%',
     right: '15%',
     display: 'flex',
@@ -30,10 +30,11 @@ const styles = {
     textAlign: 'center',
     transition: '1s'
   },
-  header: {
+  blurb: {
     fontSize: '2rem',
     color: 'black',
-    marginBottom: '25%'
+    marginBottom: '25%',
+    textTransform: 'upper-case'
   },
   button: {
     padding: '20px 45px',
@@ -41,6 +42,7 @@ const styles = {
     color: 'white',
     fontFamily: 'Changa, sans-serif',
     fontWeight: 600,
+    fontSize: '1.4rem',
     transition: '0.6s'
   },
   menuSectionTwo: {
@@ -75,7 +77,7 @@ const styles = {
 
 const activeStyles = {
   navMenuWrapper: {
-    height: 'calc(100vh - 200px',
+    top: '100px',
     opacity: 1
   }
 };
@@ -85,10 +87,11 @@ const hoverStyles = {
     backgroundColor: 'rgba(74,74,74,0.7)'
   },
   button: {
-    backgroundColor: 'rgba(210, 11, 33, 1)'
+    backgroundColor: '#00ffff',
+    color: '#000'
   },
   link: {
-    backgroundColor: 'rgba(210, 11, 33, 1)',
+    backgroundColor: '#00ffff',
     color: '#fff'
   }
 };
@@ -152,10 +155,12 @@ class NavMenu extends Component {
             onMouseEnter={this.toggleOverlay}
             onMouseLeave={this.toggleOverlay}
           >
-            <h3 className='changa6' style={styles.header}>
-              BURRITO BARS. THE WORLD’S FIRST OPENED IN 1920S LA, COURTESY OF
-              ALEJANDRO BORQUES. THE UK’S FIRST OPENED IN MANCHESTER’S
-              PICCADILLY GARDENS BACK IN 2005, COURTESY OF, WELL, US.
+            <h3 className='changa6' style={styles.blurb}>
+              Normcore vaporware twee prism poke plaid. Tumblr cold-pressed 3
+              wolf moon vaporware, fingerstache poutine intelligentsia squid
+              freegan brunch +1. Williamsburg umami chambray, tote bag vice
+              narwhal cray dreamcatcher asymmetrical church-key master cleanse
+              tumeric tilde.
             </h3>
             <button
               className='btn'
