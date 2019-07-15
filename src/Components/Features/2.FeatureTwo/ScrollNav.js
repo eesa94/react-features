@@ -1,9 +1,107 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import './ScrollNav.css';
 import { Prompt } from '../../../Styles/CommonStyles';
+import styled from 'styled-components';
 
-export class Nav extends Component {
+const ScrollNavWrapper = styled.div`
+  position: fixed;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 200;
+`;
+
+const Navigation = styled.nav`
+  width: 100%;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0);
+`;
+
+const NavigationInner = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 30px 25px;
+  transition: 0.5s;
+`;
+
+const Brand = styled.h1`
+  font-family: Changa, sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  transition: 0.5s;
+`;
+
+const LinkList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+`;
+
+const LinkListItem = styled.li`
+  margin-right: 10px;
+  text-align: center;
+  font-size: 1.6rem;
+`;
+
+const ScrollNavLink = styled.span`
+  width: 100%;
+  padding: 10px 15px;
+  color: #000;
+  background-color: #00ffff;
+  border: 2px solid #00ffff;
+  transition: 0.5s ease all;
+  &:hover {
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    border: 2px solid #00ffff;
+    cursor: pointer;
+  }
+`;
+
+const PromptArrow = styled.span`
+  font-size: 30px;
+  font-family: Changa, sans-serif;
+  font-weight: 800;
+`;
+
+const styles = {
+  navigationTop: {
+    backgroundColor: 'rgba(255, 255, 255, 0)'
+  },
+  navigationScrolled: {
+    backgroundColor: 'white'
+  },
+  navigationInnerTop: {
+    width: '88%'
+  },
+  navigationInnerScrolled: {
+    width: '100%',
+    padding: '20px 35px'
+  },
+  brandTop: {
+    color: '#00ffff'
+  },
+  brandScrolled: {
+    color: '#000'
+  },
+  promptArrowDown: {
+    transform: 'rotate(0deg)'
+  },
+  promptArrowUp: {
+    transform: 'rotate(180deg)'
+  }
+};
+
+class Nav extends Component {
   constructor(props) {
     super(props);
 
@@ -16,6 +114,10 @@ export class Nav extends Component {
 
   componentDidMount() {
     document.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll = () => {
@@ -32,57 +134,54 @@ export class Nav extends Component {
     const promptTitle = this.state.scrolled ? 'Scroll Up' : 'Scroll Down';
 
     return (
-      <div className='scrollNavWrapper'>
-        <nav
-          className='navigation'
+      <ScrollNavWrapper>
+        <Navigation
           style={
             this.state.scrolled
-              ? { backgroundColor: 'white' }
-              : { backgroundColor: 'rgba(255, 255, 255, 0)' }
+              ? styles.navigationScrolled
+              : styles.navigationTop
           }
         >
-          <div
-            className={
+          <NavigationInner
+            style={
               this.state.scrolled
-                ? 'navigationInner navigationInnerScrolled'
-                : 'navigationInner navigationInnerTop'
+                ? styles.navigationInnerScrolled
+                : styles.navigationInnerTop
             }
           >
-            <h1
-              className={
-                this.state.scrolled
-                  ? 'brand changa6 black'
-                  : 'brand changa6 cyan'
+            <Brand
+              style={
+                this.state.scrolled ? styles.brandScrolled : styles.brandTop
               }
             >
               BRAND
-            </h1>
-            <ul className='linkList d-flex flex-row justify-content-center align-items-center'>
-              <li className='linkListItem'>
-                <span className='scrollNavLink'>Link 1</span>
-              </li>
-              <li className='linkListItem'>
-                <span className='scrollNavLink'>Link 2</span>
-              </li>
-            </ul>
-          </div>
-        </nav>
+            </Brand>
+            <LinkList>
+              <LinkListItem>
+                <ScrollNavLink>Link 1</ScrollNavLink>
+              </LinkListItem>
+              <LinkListItem>
+                <ScrollNavLink>Link 2</ScrollNavLink>
+              </LinkListItem>
+            </LinkList>
+          </NavigationInner>
+        </Navigation>
 
         <Prompt style={{ float: 'right', marginRight: '10%' }}>
           <h3 className='changa8 animated pulse animatedElement'>
             {promptTitle}
           </h3>
           {this.state.scrolled ? (
-            <p className='changa8 promptArrow animated pulse animatedElement'>
+            <PromptArrow className='animated pulse animatedElement'>
               &uarr;
-            </p>
+            </PromptArrow>
           ) : (
-            <p className='changa8 promptArrow animated pulse animatedElement'>
+            <PromptArrow className='animated pulse animatedElement'>
               &darr;
-            </p>
+            </PromptArrow>
           )}
         </Prompt>
-      </div>
+      </ScrollNavWrapper>
     );
   }
 }

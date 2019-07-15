@@ -18,7 +18,7 @@
   z-index: -1;
 }
 
-.componentContainer:after {
+.templateContainer:before {
   content: '';
   position: absolute;
   bottom: -16%;
