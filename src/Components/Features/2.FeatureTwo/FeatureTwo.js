@@ -1,17 +1,24 @@
 import React from 'react';
-import '../Features.css';
+import { Container, Row, Col } from 'reactstrap';
+import FeatureMenu from '../../CommonComponents/FeatureMenu';
+import HowItWorks from '../../CommonComponents/HowItWorks';
 import ScrollNav from './ScrollNav';
-import FeatureMenu from '../FeatureMenu';
 
 const FeatureTwo = () => {
   const infoArray = [];
 
+  const howItWorksArray = [
+    'An example of a top navigation bar that changes upon scrolling down the page.',
+    'This technique can be used for subtly modifying the styling e.g. transparent to opaque background, size of text, or width of the nav bar.',
+    'Requires a function to detect scroll position which can then be used to style components dynamically.'
+  ];
+
   return (
     <div>
       <ScrollNav />
-      <div className='container-fluid featureContainer'>
-        <div className='row' style={{ paddingTop: '180px' }}>
-          <div className='col-6 offset-3'>
+      <Container fluid className='featureContainer'>
+        <Row style={{ paddingTop: '180px' }}>
+          <Col xs={{ size: 6, offset: 3 }}>
             <FeatureMenu
               name={'Scroll Nav'}
               source={
@@ -20,27 +27,14 @@ const FeatureTwo = () => {
               info={infoArray}
             />
 
-            <div className='row'>
-              <div className='col-10 offset-1'>
-                <h1 className='white changa8 mb3'>How it Works</h1>
-                <p className='changa2 white howItWorksText'>
-                  An example of a top navigation bar that changes upon scrolling
-                  down the page.
-                </p>
-                <p className='changa2 white howItWorksText'>
-                  This technique can be used for subtly modifying the styling
-                  e.g. transparent to opaque background, size of text, or width
-                  of the nav bar.
-                </p>
-                <p className='changa2 white howItWorksText'>
-                  Requires a function to detect scroll position which can then
-                  be used to style components dynamically.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            <Row>
+              <Col xs={{ size: 10, offset: 1 }}>
+                <HowItWorks howItWorksArray={howItWorksArray} />
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };

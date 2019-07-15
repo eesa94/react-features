@@ -20,3 +20,7 @@ export const GradientHeader = styled.h1`
   display: inline-block;
   transform: rotate(-1deg);
 `;
+
+export const Prompt = styled.div`
+  color: #f87ce5;
+`;

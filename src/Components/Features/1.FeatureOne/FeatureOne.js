@@ -1,7 +1,8 @@
 import React from 'react';
-import '../Features.css';
+import { Container, Row, Col } from 'reactstrap';
+import FeatureMenu from '../../CommonComponents/FeatureMenu';
+import HowItWorks from '../../CommonComponents/HowItWorks';
 import SideNav from './SideNav';
-import FeatureMenu from '../FeatureMenu';
 
 const FeatureOne = () => {
   const infoArray = [
@@ -15,11 +16,18 @@ const FeatureOne = () => {
     }
   ];
 
+  const howItWorksArray = [
+    'This is an example of an off-canvas side navigation component.',
+    'The parent component contains an array of links to output in the    menu.',
+    "The menu is toggled using a separate npm package called    react-burgers, which is a react-specific version of Jonathan Suh's animated CSS hamburgers.",
+    'Also used here is a higher order component called onClickOutside, which provides a method called handleClickOutside to toggle the menu and burger when clicking outside the menu component.'
+  ];
+
   return (
-    <div className='container-fluid featureContainer'>
+    <Container fluid className='featureContainer'>
       <SideNav />
-      <div className='row' style={{ marginTop: '100px' }}>
-        <div className='col-6 offset-3'>
+      <Row style={{ marginTop: '100px' }}>
+        <Col xs={{ size: 6, offset: 3 }}>
           <FeatureMenu
             name={'Side Nav'}
             source={
@@ -27,32 +35,14 @@ const FeatureOne = () => {
             }
             info={infoArray}
           />
-          <div className='row'>
-            <div className='col-10 offset-1'>
-              <h1 className='white changa8 mb3'>How it Works</h1>
-              <p className='changa2 white howItWorksText'>
-                This is an example of an off-canvas side navigation component.
-              </p>
-              <p className='changa2 white howItWorksText'>
-                The parent component contains an array of links to output in the
-                menu.
-              </p>
-              <p className='changa2 white howItWorksText'>
-                The menu is toggled using a separate npm package called
-                react-burgers, which is a react-specific version of Jonathan
-                Suh's animated CSS hamburgers.
-              </p>
-              <p className='changa2 white howItWorksText'>
-                Also used here is a higher order component called
-                onClickOutside, which provides a method called
-                handleClickOutside to toggle the menu and burger when clicking
-                outside the menu component.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          <Row>
+            <Col xs={{ size: 10, offset: 1 }}>
+              <HowItWorks howItWorksArray={howItWorksArray} />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

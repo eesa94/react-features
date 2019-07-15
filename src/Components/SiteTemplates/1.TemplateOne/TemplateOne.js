@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Navbar from './Navbar';
-import FeatureMenu from '../../Features/FeatureMenu';
+import FeatureMenu from '../../CommonComponents/FeatureMenu';
 
 const styles = {
   container: {

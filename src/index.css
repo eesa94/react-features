@@ -30,6 +30,11 @@ button:focus {
 }
 
 /* layout */
+.featureContainer {
+  padding-bottom: 50px;
+  min-height: 120vh;
+}
+
 .noMargin {
   margin: 0;
 }
