@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Prompt } from '../../../Styles/CommonStyles';
 import styled from 'styled-components';
+import { Brand, PromptArrow } from '../../../Styles/CommonStyles';
 
 const ScrollNavWrapper = styled.div`
   position: fixed;
@@ -23,14 +24,6 @@ const NavigationInner = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   padding: 30px 25px;
-  transition: 0.5s;
-`;
-
-const Brand = styled.h1`
-  font-family: Changa, sans-serif;
-  font-weight: 600;
-  font-size: 4rem;
-  letter-spacing: 2px;
   transition: 0.5s;
 `;
 
@@ -65,12 +58,6 @@ const ScrollNavLink = styled.span`
     border: 2px solid #00ffff;
     cursor: pointer;
   }
-`;
-
-const PromptArrow = styled.span`
-  font-size: 30px;
-  font-family: Changa, sans-serif;
-  font-weight: 800;
 `;
 
 const styles = {

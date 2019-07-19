@@ -2,7 +2,39 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import NavLink from './NavLink';
-import { Prompt } from '../../../Styles/CommonStyles';
+import styled from 'styled-components';
+import { Brand, Prompt, PromptArrow } from '../../../Styles/CommonStyles';
+
+const HoverNavWrapper = styled.div`
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+`;
+
+const HoverNav = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0 50px;
+  background-color: #285482;
+`;
+
+const MenuList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style-type: none;
+`;
 
 class Navbar extends Component {
   constructor(props) {
@@ -15,32 +47,32 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div className='hoverNavWrapper'>
-        <nav className='hoverNav d-flex flex-row justify-content-between align-items-center mb3'>
-          <div className='brandContainer'>
-            <Link to='/' className='brandLink'>
-              <h1 className='brandName changa6'>Brand</h1>
+      <HoverNavWrapper>
+        <HoverNav>
+          <div>
+            <Link to='/'>
+              <Brand>BRAND</Brand>
             </Link>
           </div>
 
-          <ul className='menuList h-100 d-flex flex-row justify-content-center align-items-center'>
+          <MenuList>
             {this.state.links.map((link, index) => (
               <NavLink key={index} index={index} link={link} />
             ))}
-          </ul>
-        </nav>
+          </MenuList>
+        </HoverNav>
 
         <Prompt
           style={{ float: 'right', marginRight: '10%', textAlign: 'center' }}
         >
-          <p className='changa8 promptArrow animated pulse animatedElement'>
+          <PromptArrow className='animated pulse animatedElement'>
             &uarr;
-          </p>
+          </PromptArrow>
           <h3 className='changa8 animated pulse animatedElement'>
             Hover over the links
           </h3>
         </Prompt>
-      </div>
+      </HoverNavWrapper>
     );
   }
 }
