@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import styled from 'styled-components';
+
+const MenuListItem = styled.li`
+  margin: 3px 30px 0 0;
+  transition: 0.5s;
+`;
 
 class NavLink extends Component {
   constructor(props) {
@@ -39,16 +45,13 @@ class NavLink extends Component {
   };
 
   render() {
-    // index prop for accessing array index
-    const index = this.props.index;
-    // link prop
-    const link = this.props.link;
-    // variable for link text
-    const linkName = link;
+    const { index, link } = this.props;
+
     // variable for home link
     const linkHome = '/';
     // variable for other links apart from home - remove white space
     const linkOther = link.toLowerCase().replace(/\s+/g, '');
+
     // these are the classnames to toggle when the links are active and inactive
     const activeMenuLink = `menuLink changa6 menuLinkActive${index + 1}`;
     const inactiveMenuLink = 'menuLink changa6';
@@ -56,8 +59,7 @@ class NavLink extends Component {
     const inactiveLinkUnderline = 'linkUnderline';
 
     return (
-      <li
-        className='menuListItem'
+      <MenuListItem
         onMouseEnter={this.handleMouseEnter.bind(this, index)}
         onMouseLeave={this.handleMouseLeave.bind(this)}
       >
@@ -68,7 +70,7 @@ class NavLink extends Component {
           }
           onClick={this.handleClick}
         >
-          {linkName}
+          {link}
         </Link>
         <div
           className={
@@ -77,7 +79,7 @@ class NavLink extends Component {
               : inactiveLinkUnderline
           }
         />
-      </li>
+      </MenuListItem>
     );
   }
 }

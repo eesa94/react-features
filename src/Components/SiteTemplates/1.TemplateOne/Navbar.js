@@ -2,36 +2,7 @@ import React, { Component } from 'react';
 import { Squeeze } from 'react-burgers';
 import NavMenu from './NavMenu';
 import onClickOutside from 'react-onclickoutside';
-
-const styles = {
-  navbar: {
-    width: '100%',
-    height: '100px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    padding: '0 15%',
-    backgroundColor: 'rgba(0, 0, 0, 1)',
-    transition: '0.5s',
-    zIndex: 3
-  },
-  header: {
-    color: '#00ffff',
-    transition: '0.3s'
-  }
-};
-
-const hoveredStyles = {
-  navbar: {
-    backgroundColor: '#00ffff'
-  },
-  header: {
-    color: '#fff'
-  }
-};
+import { Brand } from '../../../Styles/CommonStyles';
 
 class Navbar extends Component {
   state = {
@@ -86,8 +57,7 @@ class Navbar extends Component {
           onMouseEnter={this.handleMouseEnter}
           onMouseLeave={this.handleMouseLeave}
         >
-          <h1
-            className='brand changa6'
+          <Brand
             style={
               this.state.hovered
                 ? { ...styles.header, ...hoveredStyles.header }
@@ -95,7 +65,7 @@ class Navbar extends Component {
             }
           >
             BRAND
-          </h1>
+          </Brand>
           <Squeeze
             width={30}
             lineHeight={3}
@@ -113,5 +83,35 @@ class Navbar extends Component {
     );
   }
 }
+
+const styles = {
+  navbar: {
+    width: '100%',
+    height: '100px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    padding: '0 15%',
+    backgroundColor: 'rgba(0, 0, 0, 1)',
+    transition: '0.5s',
+    zIndex: 3
+  },
+  header: {
+    color: '#00ffff',
+    transition: '0.3s'
+  }
+};
+
+const hoveredStyles = {
+  navbar: {
+    backgroundColor: '#00ffff'
+  },
+  header: {
+    color: '#fff'
+  }
+};
 
 export default onClickOutside(Navbar);

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
 import NavLink from './NavLink';
 import styled from 'styled-components';
 import { Brand, Prompt, PromptArrow } from '../../../Styles/CommonStyles';
