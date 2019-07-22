@@ -29,6 +29,8 @@ class Modal extends Component {
   };
 
   render() {
+    const { name, info } = this.props;
+
     return (
       <div>
         <Button className='btn btn-secondary' onClick={this.toggleModal}>
@@ -44,7 +46,7 @@ class Modal extends Component {
             }
           >
             <h4 className='modalHeader changa6 mb2'>
-              Packages required for {this.props.name}
+              Packages required for {name}
             </h4>
             <ul
               style={{
@@ -53,12 +55,12 @@ class Modal extends Component {
                 marginBottom: '5px'
               }}
             >
-              {this.props.info.length === 0 ? (
+              {info.length === 0 ? (
                 <p className='modalText changa2'>
                   No additional packages required
                 </p>
               ) : (
-                this.props.info.map((info, index) => (
+                info.map((info, index) => (
                   <li className='mb1' key={index}>
                     <a
                       href={info.link}

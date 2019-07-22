@@ -133,7 +133,7 @@ class Home extends Component {
           <GradientHeader>Templates</GradientHeader>
           <Row>
             {this.state.templates.map((template, index) => (
-              <Col lg='4' className='featureCol'>
+              <Col lg='4' className='featureCol' key={index}>
                 <Link
                   to={template.status ? '/template-' + (index + 1) : ''}
                   className={

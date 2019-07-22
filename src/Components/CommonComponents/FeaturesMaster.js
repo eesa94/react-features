@@ -7,10 +7,11 @@ const Header = styled.h1`
 
 class FeaturesMaster extends Component {
   render() {
+    const { featureName } = this.props;
     return (
       <div className='row no-gutters mb3'>
         <div className='col-lg-4 offset-lg-4 text-center'>
-          <Header className='changa6 white'>{this.props.featureName}</Header>
+          <Header className='changa6 white'>{featureName}</Header>
         </div>
       </div>
     );
