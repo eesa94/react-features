@@ -20,7 +20,7 @@ class Home extends Component {
         { name: 'Animation & Motion', status: false }
       ],
       templates: [
-        { name: 'Template 1', status: true },
+        { name: 'Barburrito Nav', status: true },
         { name: 'Template 2', status: false },
         { name: 'Template 3', status: false }
       ],

@@ -39,6 +39,10 @@ const FeatureMenu = ({ name, info, source }) => {
         </Link>
 
         <Modal name={name} info={info} />
+
+        <a href={source} target='_blank' rel='noopener noreferrer'>
+          <Button className='btn btn-secondary'>Source</Button>
+        </a>
       </div>
     </TopBar>
   );
